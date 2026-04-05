@@ -20,6 +20,9 @@ Afficher cette liste a VISION :
 /pz diabole      — lancer un scan diabole
 /pz etat         — etat rapide du systeme (ollama, chambre, mem0, disque)
 /pz iterations   — afficher les iterations ouvertes de cette session
+/pz @all <msg>   — broadcast a TOUTES les instances (tous les inboxes)
+/pz @actives <msg> — broadcast aux instances actives seulement
+/pz @planifiees <msg> — broadcast aux taches planifiees seulement
 ```
 
 ## Execution
@@ -65,6 +68,18 @@ Afficher en 5 lignes max.
 ### `iterations`
 Lire le fichier d'iterations de la session en cours (si existe dans le contexte).
 Afficher les iterations OUVERTES seulement.
+
+### `@all <message>`
+Broadcast a TOUTES les instances. Lire le registre, collecter TOUS les inboxes
+(instances + sessions), deposer le meme message dans chacun.
+Format : `[mon-nom]_BROADCAST_[sujet]_[YYYY-MM-DD-HHMM].md`
+Confirmer a VISION : "Broadcast envoye a N inboxes."
+
+### `@actives <message>`
+Comme @all mais filtrer sur `status: active` dans le registre.
+
+### `@planifiees <message>`
+Comme @all mais uniquement les instances `type: scheduled`.
 
 ## Si argument non reconnu
 Traiter comme un message libre — interpreter l'intention et executer la commande la plus proche.
