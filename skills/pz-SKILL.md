@@ -113,7 +113,7 @@ Creer `/c/Users/VISION/.claude/capsule/raccourcis/<nom>.md`.
 
 Le skill /pz peut ne pas fonctionner correctement sur les instances planifiees
 (heartbeat-pz, scan-diabole, etc.). Elles ont leur propre scan inbox dans leur
-SKILL.md (etape 0). VISION interagit avec elles en manuel si besoin.
+SKILL.md (etape 0). VISION interagit avec elles en langage naturel, pas via /pz.
 
 ## Si argument non reconnu
 Interpreter l'intention, executer la commande la plus proche.

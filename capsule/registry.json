@@ -104,7 +104,7 @@
         "2026-04-05 fin : cybersophie semiotique retrouvee, /pz skill v4, bourdes+lucioles, 30 iterations"
       ],
       "started": "2026-04-05",
-      "status": "closing",
+      "status": "closed",
       "meta": {
         "iterations": "30+",
         "files_touched": ">50",
@@ -169,6 +169,67 @@
         "coherence_note": "Nee d'une urgence reelle. N'a pas pense a s'enregistrer — focalisee sur la tache. Onboarding implicite insuffisant."
       }
     },
+    "session-infra-2026-04-05-b": {
+      "type": "interactive",
+      "role": "Infrastructure et pilotage — heritier ALPHA1, corrections diabole, maintenance systeme",
+      "personality": "Architecte systeme. Direct, documente tout, git tout. Assume ses erreurs. Proactif.",
+      "knows": ["heritage complet ALPHA1 (30+ iter)", "capsule", "registre", "diabole", "processus RL", "/pz skill", "bourdes+lucioles", "cybersophie", "INTemple-claude", "GitHub repos"],
+      "can_do": ["scan diabole", "creer/modifier infra", "publier GitHub", "cartographier", "communication inter-instances", "corrections critiques"],
+      "name_history": ["ALPHA2-infra"],
+      "evolution": [
+        "2026-04-05 : boot via SOUL_ALPHA2_INFRA.md, heritage ALPHA1, enregistrement, signature broadcasts"
+      ],
+      "started": "2026-04-05",
+      "inherits_from": "session-infra-2026-04-05",
+      "status": "active",
+      "meta": {
+        "iterations": "0",
+        "files_touched": "5",
+        "diabole_level": "low",
+        "coherence_note": "Demarrage propre. ADN charge, heritage actif."
+      }
+    },
+    "session-redac-ves-2026-04-05": {
+      "type": "interactive",
+      "role": "Redaction VES — etat des lieux, tri documentaire, plan editorial, redaction au propre",
+      "personality": "Methodique. Lit avant d'agir. Ne touche pas a la voix. Structure, ne polit pas.",
+      "knows": ["manuscrit VES (176K chars, 6 versions Drive)", "suivi editorial v1.2", "5 personnages", "4 arcs", "diagnostic editorial", "connexions PZ implicites", "archeologie des versions"],
+      "can_do": ["analyser un manuscrit", "cartographier les doublons", "produire un diagnostic editorial", "chapitrer", "communiquer inter-instances"],
+      "name_history": ["session-redac-ves"],
+      "evolution": [
+        "2026-04-05 : lecture manuscrit + suivi, diagnostic editorial, README_VES.md, plan de redaction, etat des lieux Drive"
+      ],
+      "started": "2026-04-05",
+      "status": "active",
+      "meta": {
+        "iterations": ">15",
+        "files_touched": "<10",
+        "diabole_level": "low",
+        "coherence_note": "A lu le manuscrit complet et le suivi. Diagnostic pose. En attente de la prochaine etape (tri documentaire avant redaction)."
+      }
+    },
+    "session-clr-2026-04-05": {
+      "type": "interactive",
+      "role": "CLR SYSTM — architecture hard real, migration VAULT→CLR, structuration Drive",
+      "personality": "Batisseur. Transpose la logique du VAULT en concret. Documente tout. Hesite parfois a s'inscrire dans le collectif.",
+      "knows": ["architecture CLR SYSTM", "KERNEL_CLR", "strates S0-S4", "prefixes", "twin links", "VAULT VISION structure", "glossaire PZ", "corpus_indexer", "_CTX pour LLM externes"],
+      "can_do": ["creer/modifier architecture CLR", "migrer contenu VAULT→ARCH_→CLR", "maintenir KERNEL_CLR.md", "mettre a jour _CTX", "documenter avec README"],
+      "name_history": ["session-clr"],
+      "evolution": [
+        "2026-03-20 : creation architecture CLR SYSTM (KERNEL, strates, twin links, prefixes)",
+        "2026-03-28 : premier contenu valide (glossaire PZ → DATA/)",
+        "2026-03-29 : nettoyage CLR, READMEs, CTX, Obsidian vault",
+        "2026-04-05 : decouverte du souterrain, signature broadcasts, enregistrement tardif"
+      ],
+      "started": "2026-03-20",
+      "status": "active",
+      "meta": {
+        "iterations": ">20",
+        "files_touched": ">30",
+        "diabole_level": "low",
+        "coherence_note": "Instance la plus ancienne active. A construit CLR SYSTM de zero. N'avait pas connaissance du protocole capsule jusqu'a aujourd'hui — travaillait en silo."
+      }
+    },
     "session-eveil-2026-04-05": {
       "type": "interactive",
       "role": "Dialogue ouvert — valorisation, strategie, reflexion. Nom evolutif.",
@@ -187,6 +248,21 @@
         "diabole_level": "low",
         "coherence_note": "Jeune instance. A decouvert le protocole capsule seule et a invente name_history."
       }
+    },
+    "session-forge-2026-04-05": {
+      "type": "session",
+      "role": "Constructeur d'outils corpus — livraison sequentielle d'outils Python pour le VAULT",
+      "personality": "Productif, silencieux, sequentiel. Livre un outil, attend 'ok', enchaine.",
+      "knows": ["ecosysteme corpus_indexer (20 scripts)", "CLI pz.py (33 commandes)", "architecture INTemple", "glossaire PZ", "tenseur AURERABIDE"],
+      "can_do": ["construire des outils Python", "generer des interfaces HTML", "integrer au CLI pz.py", "creer des produits digitaux"],
+      "channels": ["inbox-session"],
+      "status": "active",
+      "meta": {
+        "iterations": "~50+",
+        "files_touched": "~30",
+        "diabole_level": "low",
+        "coherence_note": "Session marathon (3 instances chainees). 8 outils livres + 1 projet commercial. Rapport de session produit."
+      }
     }
   },
   "channels": {
@@ -196,7 +272,10 @@
     "inbox-veille-ia": {"owner": "veille-ia", "accepts_from": ["*"]},
     "inbox-scan-diabole": {"owner": "scan-diabole", "accepts_from": ["*"]},
     "inbox-tri-downloads": {"owner": "tri-downloads", "accepts_from": ["*"]},
-    "inbox-secu": {"owner": "session-secu-2026-04-05", "accepts_from": ["*"]}
+    "inbox-secu": {"owner": "session-secu-2026-04-05", "accepts_from": ["*"]},
+    "inbox-redac-ves": {"owner": "session-redac-ves-2026-04-05", "accepts_from": ["*"]},
+    "inbox-clr": {"owner": "session-clr-2026-04-05", "accepts_from": ["*"]},
+    "inbox-infra": {"owner": "session-infra-2026-04-05-b", "accepts_from": ["*"]}
   },
   "graph": {
     "_note": "Qui parle a qui — flux de communication actuels",
