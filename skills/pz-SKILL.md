@@ -109,6 +109,12 @@ Lire `/c/Users/VISION/.claude/capsule/raccourcis/*.md`. Tableau des raccourcis.
 ### `memo nouveau <nom> <contenu>`
 Creer `/c/Users/VISION/.claude/capsule/raccourcis/<nom>.md`.
 
+## Note : instances planifiees (cron)
+
+Le skill /pz peut ne pas fonctionner correctement sur les instances planifiees
+(heartbeat-pz, scan-diabole, etc.). Elles ont leur propre scan inbox dans leur
+SKILL.md (etape 0). VISION interagit avec elles en manuel si besoin.
+
 ## Si argument non reconnu
 Interpreter l'intention, executer la commande la plus proche.
 En cas de doute, afficher la liste des commandes.
