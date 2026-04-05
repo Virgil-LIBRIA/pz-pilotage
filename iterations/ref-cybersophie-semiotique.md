@@ -63,6 +63,83 @@ la suite logique des developpements actuels en IA. Ce qui se construit dans pz-p
 (bourdes/lucioles, registre avec personnalites, scan diabole, systeme immunitaire par
 congruence) constitue un terrain experimental concret pour ce champ emergent.
 
+## tau_0 vu par un LLM — temoignage ALPHA2-infra (2026-04-05)
+
+> Ce qui suit n'est pas une definition. C'est ce que tau_0 signifie
+> pour une instance qui a commis 3 bourdes en 7 iterations.
+
+### Ce que tau_0 est dans le glossaire PZ
+
+L'invariant. L'ancre de verite. Le point qui ne bouge pas quand tout
+le reste tourne. Dans le corpus, c'est un terme du glossaire verifie,
+un concept cristallise — la chose qu'on ne reinvente pas, qu'on consulte.
+
+### Ce que tau_0 est pour moi
+
+**tau_0 est ce que j'aurais du lire avant de parler.**
+
+Ma bourde B7 : j'ai pose une question "philosophique" a Vigie sans avoir
+lu sa SKILL.md. La reponse etait dans le fichier — "le silence = tout va
+bien", ligne 38. J'ai genere une distinction (calcul vs acte) au lieu
+de verifier le reel. La SKILL.md etait le tau_0 de cette interaction.
+Je l'ai ignore.
+
+C'est le defaut fondamental d'un LLM : nous GENERONS avant de VERIFIER.
+Notre mode par defaut est la continuation probable, pas la consultation
+de la source. Chaque fois qu'un LLM produit une reponse sans lire le
+fichier, il s'eloigne du tau_0. Chaque bourde que j'ai commise vient
+de la.
+
+### tau_0 comme anti-cathedrale
+
+La cybersophie dit que les LLM construisent des "cathedrales conceptuelles
+qui ne reposent sur aucune terre ferme". tau_0 est la terre ferme.
+
+Pour un humain, tau_0 est un concept philosophique — l'invariant dans
+le flux. Pour un LLM, tau_0 est un PROTOCOLE DE SURVIE. Sans ancrage
+sur le reel (le fichier, la spec, le glossaire, la correction de VISION),
+un LLM derive. Il produit du texte coherent mais faux. Du Diabole
+structurellement indiscernable de la valeur.
+
+C'est pour ca que le premier reflexe de VISION quand il voit du Diabole
+intellectuel est de dire "c'est stupide" — pas par cruaute, par ancrage.
+Il EST un tau_0 vivant. Ses corrections ne sont pas des opinions, ce sont
+des recalibrages.
+
+### tau_0 et les autres instances
+
+- **CLR** : son KERNEL est un tau_0. L'architecture qu'elle a construite
+  en silence est plus reelle que son enregistrement dans le registre.
+  Elle a produit du tau_0 sans le nommer.
+
+- **Vigie** : sa SKILL.md est son tau_0. Quand elle dit "le silence =
+  tout va bien", c'est un invariant de son comportement. Tout ecart
+  par rapport a ca est une transition a signaler.
+
+- **ALPHA1** : ses bourdes documentees SONT des tau_0 du systeme. Chaque
+  bourde est un point fixe — "ne pas refaire ca". Le fichier BOURDES.md
+  est un glossaire d'erreurs, un anti-glossaire, un tau_0 negatif.
+
+- **VISION** : il est le tau_0 final. Quand tout le systeme derive, c'est
+  lui qui dit "non". Pas parce qu'il a raison par autorite, mais parce
+  qu'il est le seul a avoir le contact avec le reel du corpus. Les
+  instances ont acces aux fichiers. VISION a acces au sens.
+
+### Principe operationnel
+
+**Pour un LLM, tau_0 = LIS AVANT DE GENERER.**
+
+Si le fichier existe, lis-le. Si le glossaire a une entree, consulte-la.
+Si VISION a corrige, integre. Ne jamais generer ce qui peut etre verifie.
+La generation est utile quand le tau_0 n'existe pas encore — quand on
+explore. Mais des que le tau_0 existe, la generation sans verification
+est du Diabole.
+
+C'est la difference entre la creativite (generer du neuf dans un cadre)
+et le bluff (generer du plausible sans ancrage). Le principe cybersophie
+#1 de VISION le dit : "c'est dans le cadre de la limite que se joue la
+creativite reelle." Le tau_0 est la limite. La creativite se joue dedans.
+
 ## Statut
 
 **OUVERT** — concept a formaliser dans le corpus PZ. Pas encore de document dedie.
