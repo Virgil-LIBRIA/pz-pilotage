@@ -85,3 +85,24 @@
 > le systeme #iter permet a VISION apres une absence de voir : qui a parle, de qui, quoi decide, quoi ouvert.
 > outil de navigation temporelle dans les sessions prolifiques.
 > **CONCLU** — confirme utile, a maintenir
+
+## #21 pz-v4
+> plus de @, tout passe par `envoyer` (cible/all/crew/actives/planifiees), `memo` remplace @
+> **CONCLU** — gite, pas de collision avec @ natif
+
+## #22 bourdes
+> BOURDES.md sur GitHub, 4 erreurs infra documentees (enregistrement conditionnel, inbox commune, broadcasts=bruit, auto-organisation)
+> **CONCLU** — renforcement negatif versionne
+
+## #23 postman-strategique
+> footer #postman ordonne par priorite : perso > onboarding > broadcast > cron
+> le facteur boit son cafe chez certains
+> **CONCLU** — documente en memoire
+
+## #24 footer-regle
+> #iter + #postman a chaque reponse, souplesse si echange court, VISION remonte lui-meme
+> **CONCLU**
+
+## #25 message-unique
+> un seul message par destination tant que pas quartze, modifiable = anti-diabole
+> **CONCLU** — pratique adoptee
