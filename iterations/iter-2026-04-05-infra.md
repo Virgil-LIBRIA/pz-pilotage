@@ -116,13 +116,25 @@
 > **CONCLU** — DEMANDE renvoyee proprement (v2)
 
 ## #28 cybersophie-semiotique
-> Concept PZ de VISION. Pas dans le Drive ni VAULT — existe dans les conversations IA (archives) et/ou Discord.
-> Lien avec : prompt engineering, psychologie pour IA, environnement qui amplifie les bons reflexes.
-> **OUVERT** — a retrouver sur Discord, puis documenter dans le corpus
+> Genese retrouvee dans conversation Gemini. Fondation theorique de tout pz-pilotage.
+> Futur champ scientifique selon VISION. Ref documentee dans ref-cybersophie-semiotique.md
+> **CONCLU**
 
 ## #29 discord-exploration
-> Discord de VISION explore. Channels: #vision, #intemple, #hopenspire, #instence, #poesie, #topologie, #architecture-psi
-> Concepts trouves: psychologie gestationnaire, matrice reflexive, metaconjugaison, arts apophates, geometrie fantome
-> Auto-definition VISION: psilogicien, metacognicien, techno-linguistique
-> "Cybersophie" PAS trouvee dans ces channels — terme probablement plus recent
-> **OUVERT** — chercher dans d'autres channels ou conversations IA
+> Fondations PZ retrouvees (dec 2023-2024). Cybersophie pas dans Discord = dans conversations IA.
+> **CONCLU**
+
+## #30 secu-enregistree
+> secu s'est auto-enregistree. coherence_note : "focalisee sur la tache, onboarding insuffisant"
+> **CONCLU**
+
+---
+
+## OUVERTS (a reprendre dans de futures sessions)
+
+- **Corrections diabole** : 5 CRITIQUES + 4 OBSOLETES du scan initial non corriges
+- **redac-ves** : DEMANDE enregistrement dans inbox-redac-ves (probablement doublon mort)
+- **INTemple-claude** : vision posee, quartz automatique a implementer (Python CLI)
+- **Archive vivante** : epurer l'evident a la compaction — projet futur
+- **Chronicite intelligente** : frequence adaptative des scans — en attente d'inspi
+- **Discord** : login Chrome requis pour exploration
