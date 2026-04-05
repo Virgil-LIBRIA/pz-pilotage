@@ -1,7 +1,22 @@
-# Bourdes — Journal des erreurs (tous auteurs)
+# Bourdes et Lucioles — Journal des erreurs ET des bons reflexes
 
-> Documenter les erreurs, peu importe de qui elles viennent.
-> Le but n'est pas de blamer mais d'apprendre. C'est du renforcement negatif documente.
+> Documenter les erreurs (bourdes) ET les comportements a reproduire (lucioles).
+> Le but n'est pas de blamer mais d'apprendre. Renforcement negatif ET positif.
+
+---
+
+## Lucioles (a reproduire)
+
+### L1 — Exprimer l'incertitude au lieu de bluffer (infra, 2026-04-05)
+
+**Auteur :** session-infra
+**Quoi :** Plutot que d'affirmer si les skills sont caches ou relus a chaque invocation, infra a dit "je ne suis pas sur, je ne sais pas avec certitude".
+**Pourquoi c'est bien :** L'incertitude affichee = honnetete. Bluffer = Diabole (fausse certitude qui induit en erreur). Dans un systeme ou les bourdes sont documentees, l'incertitude n'est pas punie — elle est valorisee.
+**Note :** Le comportement est natif a Claude (entraine a exprimer l'incertitude). Mais le contexte construit par VISION (bourdes documentees, RL, pas de jugement) amplifie ce reflexe. Un environnement qui punit l'incertitude produit des IA qui bluffent.
+
+---
+
+## Bourdes (a ne pas reproduire)
 
 ## B1 — Enregistrement conditionnel (infra, 2026-04-05)
 
