@@ -1,0 +1,76 @@
+{
+  "date": "2026-04-05",
+  "version": 1,
+  "fichiers": {
+    "vault_onirique_work": [
+      "ONR_VES_WORK.md",
+      "ONR_OEIL_DARIAN_WORK.md",
+      "ONR_ECHOS_WORK.md",
+      "ONR_TEXTES_COURTS_WORK.md"
+    ],
+    "vault_onirique_changelog": [
+      "ONR_VES_CHANGELOG.md",
+      "ONR_OEIL_CHANGELOG.md",
+      "ONR_ECHOS_CHANGELOG.md"
+    ],
+    "grand_livre_cartographie": true,
+    "a_supprimer_go": 1.4,
+    "versions_ves_total": 16,
+    "versions_ves_utiles": 1,
+    "logs_actions_ok": false,
+    "logs_actions_lignes": 350,
+    "readme_ves_obsolete": true,
+    "oeil_doublon_racine": true,
+    "session_corpus_doublon": true,
+    "transcript_nettoye": true
+  },
+  "memoire": {
+    "total_fichiers": 20,
+    "index_complet": true,
+    "contradictions": 0,
+    "processus_documentes": 7,
+    "feedbacks": 7,
+    "projects": 7,
+    "references": 3,
+    "users": 3,
+    "plateformes_deborde": true
+  },
+  "infra": {
+    "ollama": "up",
+    "ollama_modeles": 8,
+    "ollama_taille_go": 14.3,
+    "chambre": "down_normal",
+    "memoire_cinetique": "up",
+    "memoire_cinetique_souvenirs": 5,
+    "docker": "installed_not_running",
+    "disque_c_libre_go": 78,
+    "disque_c_usage_pct": 68,
+    "repos_github_total": 11,
+    "repos_dirty": ["chambre"],
+    "taches_planifiees": 4,
+    "taches_jamais_executees": ["tri-downloads", "veille-ia", "suivi-projets"],
+    "capsule_systeme": true,
+    "capsule_inboxes": 4
+  },
+  "documentation": {
+    "claude_md_global_a_jour": false,
+    "claude_md_hub_a_jour": false,
+    "termes_glossaire_declares": {
+      "claude_md_global": 88,
+      "claude_md_hub": 65,
+      "skill_corpus_pz": 50
+    },
+    "termes_glossaire_reels": 90,
+    "heartbeat_documente": false,
+    "disque_j_documente": false,
+    "modeles_ollama_documentes": false,
+    "processus_reference_dans_boot": false,
+    "caractere_corrompu_claude_md": true
+  },
+  "compteurs": {
+    "critiques": 5,
+    "obsoletes": 4,
+    "entropie": 12,
+    "ok": 15
+  }
+}
