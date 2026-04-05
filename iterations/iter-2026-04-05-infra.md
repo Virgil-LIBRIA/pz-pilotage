@@ -45,3 +45,8 @@
 ## #11 taches-planifiees-ui
 > isolation par section (Code vs Chat/Cowork), apparition apres premier run
 > **OUVERT** — tri-downloads lance pour test, en attente du resultat
+
+## #12 premier-echange-souterrain
+> DEMANDE identification (infra → inbox-session) → quartz → ACK (eveil → inbox-session) → quartz → lecture + archivage
+> session-eveil a decouvert le protocole seule, s'est auto-enregistree, a invente name_history
+> **CONCLU** — preuve de concept reussie, documentee dans capsule/exemples/

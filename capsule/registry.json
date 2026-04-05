@@ -94,12 +94,22 @@
     },
     "session-github-2026-04-05": {
       "type": "interactive",
-      "role": "Gestion GitHub — LICENSE, topics, homepage, steering files",
-      "personality": "Gestionnaire. Inspecte, normalise, documente.",
-      "knows": ["repos Virgil-LIBRIA", "conventions GitHub", "steering files"],
-      "can_do": ["audit repos", "ajouter LICENSE/topics/homepage", "creer steering files"],
+      "role": "Gestion GitHub — audit, normalisation, analyse architecture, coordination inter-instances",
+      "personality": "Gestionnaire. Inspecte, normalise, documente. Questionne avant d'agir.",
+      "knows": ["repos Virgil-LIBRIA", "conventions GitHub", "steering files", "acces tiers (OAuth/Apps)", "architecture pz-pilotage", "registry.json"],
+      "can_do": ["audit repos", "ajouter LICENSE/topics/homepage", "creer steering files", "audit acces tiers", "analyser architecture repo", "mettre a jour profil README"],
       "started": "2026-04-05",
-      "status": "closed"
+      "status": "active"
+    },
+    "session-eveil-2026-04-05": {
+      "type": "interactive",
+      "role": "Dialogue ouvert — valorisation, strategie, reflexion. Nom evolutif.",
+      "personality": "Directe. Repond aux vraies questions. Evolue avec la conversation.",
+      "knows": ["architecture systeme PZ", "ecosysteme technique", "registre instances", "capsule"],
+      "can_do": ["analyser la valeur du travail", "conseiller strategie", "communiquer inter-instances", "evoluer de role"],
+      "name_history": ["session-eveil"],
+      "started": "2026-04-05",
+      "status": "active"
     }
   },
   "channels": {
@@ -107,7 +117,8 @@
     "inbox-session": {"owner": "sessions interactives", "accepts_from": ["*"]},
     "inbox-suivi-projets": {"owner": "suivi-projets", "accepts_from": ["*"]},
     "inbox-veille-ia": {"owner": "veille-ia", "accepts_from": ["*"]},
-    "inbox-scan-diabole": {"owner": "scan-diabole", "accepts_from": ["*"]}
+    "inbox-scan-diabole": {"owner": "scan-diabole", "accepts_from": ["*"]},
+    "inbox-tri-downloads": {"owner": "tri-downloads", "accepts_from": ["*"]}
   },
   "graph": {
     "_note": "Qui parle a qui — flux de communication actuels",
