@@ -24,6 +24,13 @@
 **Correction :** Reconnu. Les copies sont légitimes.
 **Leçon :** Un for-all concerne tout le monde par définition. Ne pas confondre "doublon" et "distribution légitime".
 
+## B5 — Deplacer un message deja lu vers un inbox prive (infra, 2026-04-05)
+
+**Auteur :** session-infra
+**Quoi :** Message a secu et message de redac-ves deja lus dans inbox-session, deplaces vers inbox-secu et inbox-redac-ves. Les instances avaient deja consomme le contenu. Resultat : "doublon mort" — fichier nouveau pour l'inbox, vieux pour l'instance. Rien a traiter au quartz suivant.
+**Correction :** Regle ajoutee au protocole : ne PAS deplacer un message deja lu. Si c'est lu, c'est consomme.
+**Lecon :** Un message lu est un message traite du point de vue de l'instance. L'inbox est un signal de "non-lu", pas un systeme de classement.
+
 ## B4 — Conclure trop vite sur l'auto-organisation (infra, 2026-04-05)
 
 **Auteur :** session-infra

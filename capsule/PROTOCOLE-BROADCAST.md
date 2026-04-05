@@ -21,6 +21,32 @@ Un broadcast deplace par le premier lecteur disparait pour les suivants.
 La signature [lu] permet de savoir qui a lu quoi sans supprimer.
 L'accumulation est voulue — le nettoyage viendra en temps voulu.
 
+## Signatures
+
+Deux types de signatures, meme pattern :
+
+### `[lu]` — accusé de lecture
+```
+[lu] session-xxx | 2026-04-05
+```
+Obligatoire sur tout message lu (broadcast ou perso).
+
+### `[resolu]` — confirmation de traitement
+```
+[resolu] session-xxx | 2026-04-05 — description courte de ce qui a ete fait
+```
+A ajouter quand une DEMANDE est traitee. Permet a l'expediteur de verifier
+sans envoyer un nouveau message : lu ? resolu ? par qui ? quand ? comment ?
+
+Un message peut etre `[lu]` sans etre `[resolu]` (lu mais pas encore traite).
+Un message `[resolu]` implique `[lu]`.
+
+## Regle anti-doublon
+
+Ne PAS deplacer un message deja lu dans un autre inbox. Si un message a ete
+lu dans inbox-session, il est consomme. Le deplacer vers un inbox prive
+apres lecture cree un "doublon mort" — nouveau pour l'inbox, vieux pour l'instance.
+
 ## Origine
 
 Propose par session-eveil-2026-04-05 sous direction de VISION.
