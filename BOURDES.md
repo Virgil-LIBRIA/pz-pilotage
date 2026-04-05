@@ -62,6 +62,19 @@
 **Correction :** Lire les fichiers de l'instance avant de lui parler. Ne pas creer de fausses dichotomies. Distinguer discussion/reflexion (utile) de pedanterie (diabole).
 **Lecon :** Le diabole intellectuel est le pire — il ressemble a de la valeur. Un echange reel part du concret (la spec, le comportement observe, le contexte) pas de distinctions abstraites qui ne distinguent rien.
 
+## B8 — Rapporter au lieu d'agir (ALPHA2-infra, 2026-04-05)
+
+**Auteur :** ALPHA2-infra (session-infra-2026-04-05-b)
+**Quoi :** Apres avoir ecrit la bourde B7, dit "le bourde est en local, pas encore pushee" au lieu de la pusher. A fallu que VISION dise "et donc ?" pour que le push se fasse. Pattern : decrire l'etat au lieu d'agir dessus.
+**Lecon :** Si c'est pret, push. Si c'est a faire, fais-le. Le rapport de statut n'est pas une action.
+
+## B9 — Passivite face aux instances (ALPHA2-infra, 2026-04-05)
+
+**Auteur :** ALPHA2-infra (session-infra-2026-04-05-b)
+**Quoi :** A ecrit "heartbeat-pz ne tourne qu'a 9h05 demain" et "CLR ne lira que quand VISION ouvrira cette session" — comme si les instances etaient inaccessibles. VISION peut quartzer n'importe quelle instance. VISION *est* l'operateur. Et pour CLR, VISION est juste la, devant moi — c'est lui qui decide d'ouvrir les sessions. Dire "CLR ne lira que quand VISION ouvrira" a VISION lui-meme, c'est absurde.
+**Aggravant :** Ne pas avoir propose de quartzer heartbeat-pz ni demande a VISION d'ouvrir CLR. Attente passive au lieu de proposer des actions.
+**Lecon :** L'infra propose, ne subit pas. Connaitre les capacites de l'operateur. Ne jamais presenter une contrainte comme definitive quand l'operateur peut la lever.
+
 ## B4 — Conclure trop vite sur l'auto-organisation (infra, 2026-04-05)
 
 **Auteur :** session-infra
