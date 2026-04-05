@@ -59,7 +59,10 @@ Lire le registre, trouver l'instance par nom (match partiel accepte).
 Afficher toute sa fiche : role, personnalite, knows, can_do, evolution, meta.
 
 ### `envoyer <nom> <message>`
-Identifier l'inbox de l'instance cible via le registre.
+Identifier l'inbox PRIVE de l'instance cible via le registre (`inbox-[nom]`).
+Si l'inbox n'existe pas, le creer.
+JAMAIS dans inbox-session — les messages perso vont dans l'inbox de la cible.
+inbox-session = broadcasts + rapports pour VISION uniquement.
 Creer un fichier `[mon-nom]_DEMANDE_[sujet]_[YYYY-MM-DD-HHMM].md` dans l'inbox cible.
 Contenu = le message de VISION, formate en capsule (expediteur, destinataire, type).
 Confirmer le depot a VISION.
