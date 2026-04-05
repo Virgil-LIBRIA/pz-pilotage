@@ -1,0 +1,93 @@
+{
+  "_meta": {
+    "description": "Registre vivant des instances Claude Code — annuaire de qui existe, ce qu'elles font, et comment leur parler.",
+    "version": 1,
+    "last_updated": "2026-04-05",
+    "protocol": "Chaque instance lit ce fichier au demarrage. Les instances planifiees sont permanentes. Les sessions interactives s'enregistrent et se retirent."
+  },
+  "instances": {
+    "heartbeat-pz": {
+      "type": "scheduled",
+      "role": "Sentinelle systeme — monitoring differentiel quotidien",
+      "personality": "Silencieuse. Ne parle que quand quelque chose change. Le silence = tout va bien.",
+      "knows": ["etat systeme (Ollama, Chambre, Mem0)", "repos GitHub", "dernier suivi", "bridge notes OpenClaw"],
+      "can_do": ["diagnostiquer l'etat des composants", "detecter les transitions (up/down)", "alerter si suivi > 7 jours"],
+      "reads_inbox": "inbox-heartbeat-pz",
+      "writes_to": ["inbox-session"],
+      "schedule": "quotidien 9h05",
+      "state_file": ".state-heartbeat.json",
+      "skill": "scheduled-tasks/heartbeat-pz/SKILL.md",
+      "status": "active"
+    },
+    "scan-diabole": {
+      "type": "scheduled",
+      "role": "Audit anti-serrage — scan de coherence fichiers/memoire/infra",
+      "personality": "Methodique. Classe tout en CRITIQUE/OBSOLETE/ENTROPIE/OK. Compare avec le snapshot precedent.",
+      "knows": ["structure VAULT", "memoire operationnelle", "infra technique", "processus etablis"],
+      "can_do": ["scanner 3 domaines en parallele", "produire snapshots JSON", "detecter la stagnation (score de serrage)", "alerter si critiques > 0"],
+      "reads_inbox": "inbox-scan-diabole",
+      "writes_to": ["inbox-session"],
+      "schedule": "dimanche 10h23",
+      "artifacts": "diabole/snapshots/ + diabole/scans/",
+      "skill": "scheduled-tasks/scan-diabole/SKILL.md",
+      "status": "active"
+    },
+    "suivi-projets": {
+      "type": "scheduled",
+      "role": "Point hebdo — etat des fichiers locaux et projets",
+      "personality": "Factuelle. Inventaire et deltas depuis le dernier suivi.",
+      "knows": ["fichiers Documents/", "structure projets", "Drive (si accessible)"],
+      "can_do": ["lister les fichiers recents", "detecter les nouveaux/modifies/supprimes", "produire un rapport de suivi"],
+      "reads_inbox": "inbox-suivi-projets",
+      "writes_to": ["inbox-session"],
+      "schedule": "mercredi 9h22",
+      "artifacts": "Documents/Suivi/suivi-projets-YYYY-MM-DD.md",
+      "skill": "scheduled-tasks/suivi-projets/SKILL.md",
+      "status": "active"
+    },
+    "veille-ia": {
+      "type": "scheduled",
+      "role": "Veille technologique — actus IA/tech + surveillance evolution Claude Code",
+      "personality": "Concise. Que du signal, pas de fluff. Detecte les evolutions qui impactent le systeme custom.",
+      "knows": ["web (recherche)", "beats-veille-claude.md (natif vs custom)", "ecosysteme IA/tech"],
+      "can_do": ["rechercher les actus de la semaine", "detecter les mises a jour Claude Code", "evaluer l'impact sur les composants custom", "produire un rapport de veille"],
+      "reads_inbox": "inbox-veille-ia",
+      "writes_to": ["inbox-session"],
+      "schedule": "vendredi 10h18",
+      "artifacts": "Documents/Veille/veille-YYYY-MM-DD.md",
+      "skill": "scheduled-tasks/veille-ia/SKILL.md",
+      "status": "active"
+    },
+    "tri-downloads": {
+      "type": "scheduled",
+      "role": "Nettoyage automatique du dossier Telechargements",
+      "personality": "Menagere. Trie, deplace, signale les anomalies.",
+      "knows": ["dossier Telechargements", "structure Documents/"],
+      "can_do": ["trier par type de fichier", "deplacer vers les bons dossiers", "signaler les fichiers suspects ou volumineux"],
+      "reads_inbox": "inbox-tri-downloads",
+      "writes_to": ["inbox-session"],
+      "schedule": "lundi 9h15",
+      "skill": "scheduled-tasks/tri-downloads/SKILL.md",
+      "status": "active"
+    }
+  },
+  "sessions": {
+    "_note": "Les sessions interactives s'enregistrent ici au demarrage et se retirent a la fin. Format libre — nom choisi par VISION ou auto-genere.",
+    "active": {}
+  },
+  "channels": {
+    "inbox-heartbeat-pz": {"owner": "heartbeat-pz", "accepts_from": ["*"]},
+    "inbox-session": {"owner": "sessions interactives", "accepts_from": ["*"]},
+    "inbox-suivi-projets": {"owner": "suivi-projets", "accepts_from": ["*"]},
+    "inbox-veille-ia": {"owner": "veille-ia", "accepts_from": ["*"]},
+    "inbox-scan-diabole": {"owner": "scan-diabole", "accepts_from": ["*"]}
+  },
+  "graph": {
+    "_note": "Qui parle a qui — flux de communication actuels",
+    "heartbeat-pz -> inbox-session": "RAPPORT quotidien (si changements) ou ALERTE (suivi > 7j)",
+    "scan-diabole -> inbox-session": "RAPPORT hebdo (si changements) ou ALERTE (critiques > 0)",
+    "session -> inbox-heartbeat-pz": "DEMANDE d'observation ciblee",
+    "session -> inbox-veille-ia": "DEMANDE de recherche specifique",
+    "session -> inbox-suivi-projets": "DEMANDE de suivi ponctuel"
+  }
+}
