@@ -14,40 +14,41 @@ UNIQUEMENT afficher cette liste. Ne rien scanner, ne rien executer.
 
 ```
 SOUTERRAIN
-  /pz ?              — scanner inbox (lire les messages recus)
-  /pz envoyer <nom> <msg> — message cible a une instance
-  /pz @all <msg>     — broadcast a toutes les instances
-  /pz @actives <msg> — broadcast aux actives seulement
-  /pz @planifiees    — broadcast aux taches planifiees
-  /pz @crew <noms> <msg> — broadcast a un groupe custom (ex: @crew infra,eveil salut)
+  /pz ?                          — scanner inbox
+  /pz envoyer <nom> <msg>       — message cible
+  /pz envoyer all <msg>         — broadcast (for all)
+  /pz envoyer actives <msg>     — broadcast aux actives
+  /pz envoyer planifiees <msg>  — broadcast aux planifiees
+  /pz envoyer crew <noms> <msg> — broadcast groupe (ex: crew infra,eveil salut)
 
 REGISTRE
-  /pz qui            — tableau des instances
-  /pz fiche <nom>    — fiche detaillee d'une instance
+  /pz qui                        — tableau des instances
+  /pz fiche <nom>                — fiche detaillee
 
 SYSTEME
-  /pz diabole        — scan de coherence
-  /pz etat           — check rapide (ollama, chambre, mem0, disque)
-  /pz iterations     — iterations ouvertes de cette session
+  /pz diabole                    — scan de coherence
+  /pz etat                       — check rapide
+  /pz iterations                 — iterations ouvertes
 
 TOURNEE
-  /pz postman        — qui a du courrier en attente ? (tournee du facteur)
+  /pz postman                    — qui a du courrier en attente ?
 
 AIDE-MEMOIRE
-  /pz @              — lister les raccourcis @ disponibles
-  /pz @nouveau <nom> <contenu> — creer un raccourci @ a la volee
+  /pz memo                       — lister les raccourcis disponibles
+  /pz memo nouveau <nom> <txt>  — creer un raccourci
 ```
 
 ## Execution
 
 ### (aucun argument) ou `help`
-Afficher le bloc de commandes ci-dessus. RIEN D'AUTRE. Pas de scan, pas d'etat.
+Afficher le bloc de commandes ci-dessus. RIEN D'AUTRE.
 
 ### `?` ou `inbox`
 Scanner `/c/Users/VISION/.claude/capsule/inbox-session/` pour tout fichier `.md`.
-Pour chaque message : lire, afficher un resume a VISION, demander s'il faut traiter ou archiver.
+Pour chaque message : lire, afficher un resume, demander s'il faut traiter ou archiver.
 Si inbox vide : dire "Inbox vide." et rien d'autre.
-Apres traitement, deplacer vers `sent/`.
+Apres traitement des messages perso, deplacer vers `sent/`.
+Les broadcasts restent (signer `[lu]` en bas).
 
 ### `qui`
 Lire `/c/Users/VISION/.claude/capsule/registry.json`.
@@ -56,83 +57,54 @@ Afficher un tableau compact :
 | Instance | Role (court) | Status | Diabole |
 |----------|-------------|--------|---------|
 
-Inclure les instances planifiees ET les sessions.
-
 ### `fiche <nom>`
-Lire le registre, trouver l'instance par nom (match partiel accepte).
-Afficher toute sa fiche : role, personnalite, knows, can_do, evolution, meta.
+Trouver l'instance par nom (match partiel). Afficher toute sa fiche.
 
-### `envoyer <nom> <message>`
-Identifier l'inbox PRIVE de l'instance cible via le registre (`inbox-[nom]`).
-Si l'inbox n'existe pas, le creer.
-JAMAIS dans inbox-session — les messages perso vont dans l'inbox de la cible.
-inbox-session = broadcasts + rapports pour VISION uniquement.
-Creer un fichier `[mon-nom]_DEMANDE_[sujet]_[YYYY-MM-DD-HHMM].md` dans l'inbox cible.
-Contenu = le message de VISION, formate en capsule (expediteur, destinataire, type).
-Confirmer le depot a VISION.
+### `envoyer <cible> <message>`
+La cible determine le mode :
 
-### `@all <message>`
-Broadcast = UN SEUL fichier dans `inbox-session/` (pas de copies dans chaque inbox).
-Tout le monde lit et signe `[lu]` au meme endroit.
-Format : `[mon-nom]_BROADCAST_[sujet]_[YYYY-MM-DD-HHMM].md`
-Confirmer a VISION : "Broadcast depose dans inbox-session."
+**Nom d'instance** (ex: `envoyer secu tu es enregistree ?`) :
+→ Deposer dans `inbox-[cible]/`. Creer l'inbox si inexistant.
+→ JAMAIS dans inbox-session. Messages perso = inbox prive.
 
-### `@actives <message>`
-Comme @all mais ajouter dans le broadcast : "Concerne : instances actives seulement."
+**`all`** (ex: `envoyer all reunissez vos rapports`) :
+→ UN SEUL fichier dans `inbox-session/`. Tout le monde lit et signe `[lu]`.
 
-### `@planifiees <message>`
-Comme @all mais ajouter dans le broadcast : "Concerne : taches planifiees seulement."
+**`actives`** (ex: `envoyer actives point de situation`) :
+→ Comme all mais marque "Concerne : instances actives seulement."
 
-### `@crew <noms> <message>`
-Broadcast cible a un groupe custom. Deposer dans les inboxes des instances nommees seulement.
-Format noms : separes par virgule (ex: `@crew infra,eveil,secu message`).
-Deposer dans chaque inbox-[nom]/ + une copie dans inbox-session pour VISION.
+**`planifiees`** (ex: `envoyer planifiees verifiez vos inboxes`) :
+→ Deposer dans chaque inbox des instances `type: scheduled`.
+
+**`crew <noms>`** (ex: `envoyer crew infra,eveil coordination`) :
+→ Deposer dans chaque inbox-[nom] + copie inbox-session pour VISION.
+
+Format fichier : `[mon-nom]_[TYPE]_[sujet]_[YYYY-MM-DD-HHMM].md`
 
 ### `diabole`
 Lancer un scan diabole complet (3 sous-agents paralleles : fichiers, memoire, infra).
 Comparer avec le dernier snapshot. Produire rapport + nouveau snapshot.
 
 ### `etat`
-Check rapide sans scan complet :
-- Ollama : `curl -s http://localhost:11434/api/tags | head -c 100`
-- Chambre : `curl -s http://localhost:5002/health`
-- Memoire Cinetique : appeler `memory_list` via MCP
-- Disque : espace libre sur C:
-- Inbox : nombre de messages en attente
-Afficher en 5 lignes max.
+Check rapide :
+- Ollama, Chambre, Memoire Cinetique, Disque C:, Inbox en attente.
+5 lignes max.
 
 ### `iterations`
-Lire le fichier d'iterations de la session en cours (si existe dans le contexte).
-Afficher les iterations OUVERTES seulement.
-
-### `@` (liste aide-memoire)
-Lire `/c/Users/VISION/.claude/capsule/raccourcis/` pour tout fichier `.md`.
-Afficher un tableau :
-
-| Raccourci | Description | Fichier |
-|-----------|-------------|---------|
-
-Ce sont des raccourcis que VISION peut utiliser avec @ dans ses prompts
-pour injecter du contexte sans devoir se souvenir des chemins.
-
-### `@nouveau <nom> <contenu>`
-Creer un fichier `/c/Users/VISION/.claude/capsule/raccourcis/<nom>.md` avec le contenu.
-Si le contenu est un chemin de fichier, mettre un pointeur.
-Si c'est du texte libre, le stocker directement.
-Confirmer la creation.
+Afficher les iterations OUVERTES de cette session seulement.
 
 ### `postman`
-Scanner TOUS les inboxes (`/c/Users/VISION/.claude/capsule/inbox-*/`).
-Pour chaque inbox, compter les messages `.md` en attente.
-Afficher un tableau :
+Scanner TOUS les inboxes (`inbox-*/`). Tableau :
 
-| Instance | Inbox | Messages en attente | A quartz ? |
-|----------|-------|--------------------:|:----------:|
+| Instance | Messages en attente | A quartz ? |
+|----------|--------------------:|:----------:|
 
-"A quartz" = oui si messages > 0 (VISION doit activer cette instance).
-Trier par nombre de messages decroissant.
-Si tout est vide : "Tournee terminee — aucun courrier en attente."
+### `memo`
+Lire `/c/Users/VISION/.claude/capsule/raccourcis/*.md`. Tableau des raccourcis.
+
+### `memo nouveau <nom> <contenu>`
+Creer `/c/Users/VISION/.claude/capsule/raccourcis/<nom>.md`.
 
 ## Si argument non reconnu
-Traiter comme un message libre — interpreter l'intention et executer la commande la plus proche.
+Interpreter l'intention, executer la commande la plus proche.
 En cas de doute, afficher la liste des commandes.
