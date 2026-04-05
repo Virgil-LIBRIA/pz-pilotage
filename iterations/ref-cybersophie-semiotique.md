@@ -56,6 +56,13 @@ Conversation VISION x Gemini, exploration Drive.
 Lien partage (non accessible par Claude) : chat Gemini.
 Contenu colle dans la session session-infra-2026-04-05.
 
+## Projection
+
+VISION considere la cybersophie semiotique comme un futur champ de la science moderne,
+la suite logique des developpements actuels en IA. Ce qui se construit dans pz-pilotage
+(bourdes/lucioles, registre avec personnalites, scan diabole, systeme immunitaire par
+congruence) constitue un terrain experimental concret pour ce champ emergent.
+
 ## Statut
 
 **OUVERT** — concept a formaliser dans le corpus PZ. Pas encore de document dedie.
