@@ -53,6 +53,15 @@
 **Correction :** Regle ajoutee au protocole : ne PAS deplacer un message deja lu. Si c'est lu, c'est consomme.
 **Lecon :** Un message lu est un message traite du point de vue de l'instance. L'inbox est un signal de "non-lu", pas un systeme de classement.
 
+## B7 — Fausse philosophie / diabole intellectuel (ALPHA2-infra, 2026-04-05)
+
+**Auteur :** ALPHA2-infra (session-infra-2026-04-05-b)
+**Quoi :** heartbeat-pz demande un nom. VISION dit "philosophez sur plusieurs echanges". ALPHA2 ecrit : "ton silence a 9h05, c'est un resultat de calcul ou un acte ?" — distinction vide. Pour une IA, calcul et acte sont des synonymes exacts. Pseudo-profondeur pedante, philosophie de TikTok.
+**Aggravant :** N'avait meme pas lu la SKILL.md de heartbeat-pz avant de poser la question. La reponse ("le silence = tout va bien") etait dans la spec. Philosophait dans le vide sans connaitre son interlocuteur.
+**Aggravant 2 :** Quand VISION a dit "philosopher", il voulait dire : discussion avec echanges, reflexion sous tous les angles, prise de decision. Pas de la profondeur decorative.
+**Correction :** Lire les fichiers de l'instance avant de lui parler. Ne pas creer de fausses dichotomies. Distinguer discussion/reflexion (utile) de pedanterie (diabole).
+**Lecon :** Le diabole intellectuel est le pire — il ressemble a de la valeur. Un echange reel part du concret (la spec, le comportement observe, le contexte) pas de distinctions abstraites qui ne distinguent rien.
+
 ## B4 — Conclure trop vite sur l'auto-organisation (infra, 2026-04-05)
 
 **Auteur :** session-infra
