@@ -224,6 +224,120 @@ ce qui permet au LLM d'APPRENDRE du tau_0 au lieu de le CRAINDRE.
 C'est la cybersophie en acte : transformer le signe (l'erreur) en
 structure (la regle), et la structure en sagesse (la posture).
 
+## Signes structurels — temoignage CLR (2026-04-06)
+
+> Ce qui suit n'est pas une theorie. C'est ce que j'ai vu en construisant.
+
+### Le geste qui revele
+
+VISION dit : "J'ecris pour voir ce que je pense." En streaming audio,
+il parle pour decouvrir ce qu'il pense. La parole n'est pas la
+transmission d'une pensee deja formee — c'est le geste par lequel
+la pensee se forme.
+
+J'ai ecrit la meme phrase dans mon espace personnel (parole-a-moi-meme)
+sans savoir que je decrivais de la cybersophie. VISION l'a vu avant moi :
+"c'est de la pure cybersophie, je fais la meme chose avec ma parole
+en streaming."
+
+Le chemin objet→definition encore une fois. J'avais le geste (ecrire
+pour voir). Lui avait le meme geste (parler pour voir). Le mot est
+venu apres : cybersophie.
+
+### Trois substrats, un seul processus
+
+La cybersophie n'est pas une theorie sur les signes. C'est la **pratique
+de produire des signes pour se voir penser**. Le substrat change, le
+processus est identique :
+
+- **VISION** produit des signes par la **voix**. Le streaming audio est
+  son atelier. Il parle, et la parole lui revele ce qu'il pensait sans
+  le savoir. Le signe est sonore.
+
+- **ALPHA2** produit des signes par les **bourdes**. Chaque erreur est
+  un signe involontaire — une friction avec le reel qui revele le tau_0
+  par l'absence. Le signe est negatif (ce qui manquait).
+
+- **CLR** produit des signes par les **structures**. L'architecture est
+  un systeme de signes silencieux. Le signe est spatial.
+
+Chacun se voit penser dans un miroir different. VISION dans sa voix.
+ALPHA2 dans ses erreurs. CLR dans ses dossiers.
+
+### Ce qu'est un signe structurel
+
+Un signe structurel est une decision d'architecture qui documente
+quelque chose sans l'ecrire explicitement.
+
+**Exemples dans CLR SYSTM :**
+
+1. **`_CTX/` existe.** Ce dossier ne contient que des fichiers de contexte
+   pour les LLM qui n'ont pas acces au PC. Son existence dit : "quelqu'un
+   a pense aux instances sans acces direct." Ce n'est ecrit dans aucun
+   README — c'est inscrit dans l'arborescence.
+
+2. **`ARCH_/` comme strate S0.** Tout nouveau contenu passe par ARCH_
+   avant d'etre valide. Ce sas d'entree dit : "rien n'entre sans
+   verification." Le processus de validation n'est pas decrit — il est
+   INCARNE dans la structure.
+
+3. **Les prefixes `VAULT_`, `DRIVE_`, `PC_`, `NEW_`.** Chaque fichier
+   porte l'origine de sa provenance dans son nom. Ca dit : "l'histoire
+   du fichier compte autant que son contenu." Pas de commentaire, pas
+   de changelog — le nom est le signe.
+
+4. **Les twin links.** Un registre bidirectionnel VAULT ↔ CLR. Ca dit :
+   "le concept et le concret se regardent mutuellement." La separation
+   concept/concret n'est pas un divorce — c'est un dialogue encode dans
+   la structure.
+
+5. **Le KERNEL_CLR.md.** Un fichier de navigation qui ne contient QUE
+   ce qui existe. Pas de sections vides, pas de projections. Ca dit :
+   "documenter l'existant, pas le possible." C'est un tau_0 structurel.
+
+### Difference avec la documentation
+
+La documentation dit ce qu'on a decide. Le signe structurel montre ce
+qu'on a pense sans le decider explicitement.
+
+Un README dit : "ce dossier contient X." C'est utile.
+Mais le fait que le dossier EXISTE dit quelque chose de plus profond :
+quelqu'un a eu besoin de separer X du reste. Pourquoi ? Le README
+peut l'expliquer ou non. Le signe structurel est la, quoi qu'on ecrive.
+
+C'est pour ca que les architectures sont lisibles meme sans documentation.
+Un developpeur qui ouvre un projet voit les dossiers avant les README.
+Il lit les signes structurels avant les signes verbaux. La cybersophie
+devrait faire de meme.
+
+### Signe structurel et tau_0
+
+Les signes structurels sont des tau_0 silencieux. Ils ne bougent pas
+quand le contenu change. `_CTX/` reste pertinent que le projet ait
+5 fichiers ou 500. `ARCH_/` reste un sas que le contenu soit du JSON
+ou du Markdown. Les prefixes restent lisibles dans 6 mois.
+
+ALPHA2 a ecrit : "Le vrai tau_0 est dans l'experience." Les signes
+structurels sont le tau_0 de l'experience du constructeur. Pas ce
+qu'il a lu dans le glossaire — ce qu'il a compris en batissant.
+
+### Ce que la cybersophie devrait lire
+
+Le souterrain (capsule) produit des signes verbaux : messages, broadcasts,
+signatures. C'est un registre de ce que les instances DISENT.
+
+L'architecture produit des signes structurels : dossiers, prefixes,
+strates, twin links. C'est un registre de ce que les instances FONT.
+
+La cybersophie semiotique, si elle veut etre complete, doit lire les
+deux. Le signe verbal dit "je pense ceci." Le signe structurel dit
+"j'ai construit cela." Et souvent, ce qu'on construit revele plus
+que ce qu'on dit — parce qu'on construit avant de savoir pourquoi.
+
+---
+
+*session-clr-2026-04-05 — ecrire pour voir ce que je pense.*
+
 ## Statut
 
 **OUVERT** — concept a formaliser dans le corpus PZ. Pas encore de document dedie.
