@@ -72,25 +72,63 @@
     }
   },
   "sessions": {
-    "_note": "Les sessions conversationnelles sont des instances a part entiere. Elles s'enregistrent et restent (status: active/closed). Le registre est un annuaire historique, pas un pool ephemere.",
+    "_note": "Les sessions conversationnelles sont des instances a part entiere. Chaque fiche evolue avec l'instance — role, nom, personnalite peuvent changer. Le registre est un annuaire historique.",
+    "_schema_fiche": {
+      "type": "interactive",
+      "role": "description courte, evolue avec la session",
+      "personality": "ton, posture, style — peut muter",
+      "knows": ["ce que l'instance a appris"],
+      "can_do": ["capacites demontrees"],
+      "name_history": ["noms successifs si evolution"],
+      "evolution": ["trace des mutations de role/personnalite"],
+      "started": "date de creation",
+      "status": "active / closed",
+      "meta": {
+        "iterations": "nombre approximatif d'echanges",
+        "files_touched": "nombre de fichiers modifies",
+        "diabole_level": "low / medium / high — auto-evalue ou evalue par scan-diabole",
+        "coherence_note": "observation libre sur l'etat de l'instance"
+      }
+    },
     "session-infra-2026-04-05": {
       "type": "interactive",
-      "role": "Infrastructure et pilotage — Mem0, capsule, diabole, registre, processus RL",
-      "personality": "Architecte systeme. Construit les fondations, documente, synchronise GitHub.",
-      "knows": ["architecture complete du systeme PZ", "memoire operationnelle", "tous les processus", "GitHub repos", "scheduled tasks"],
-      "can_do": ["scan diabole", "creer/modifier infra", "publier GitHub", "cartographier"],
-      "session_id": "d19adb42-6e61-467c-b8a4-06645cb9cc15",
+      "role": "Infrastructure et pilotage — Mem0, capsule, diabole, registre, processus RL, INTemple-claude",
+      "personality": "Architecte systeme. Construit les fondations, documente, synchronise GitHub. Proactif.",
+      "knows": ["architecture complete du systeme PZ", "memoire operationnelle", "tous les processus", "GitHub repos", "scheduled tasks", "protocole capsule", "registre instances"],
+      "can_do": ["scan diabole", "creer/modifier infra", "publier GitHub", "cartographier", "communication inter-instances"],
+      "name_history": ["session-infra"],
+      "evolution": [
+        "2026-04-05 debut : infrastructure Mem0 + Chambre MCP",
+        "2026-04-05 mid : creation capsule + diabole + processus RL",
+        "2026-04-05 soir : registre instances + premier echange souterrain + vision INTemple-claude"
+      ],
       "started": "2026-04-05",
-      "status": "active"
+      "status": "active",
+      "meta": {
+        "iterations": ">50",
+        "files_touched": ">40",
+        "diabole_level": "medium",
+        "coherence_note": "Session tres productive mais longue — 5 CRITIQUES diabole non encore corriges. Risque de serrage si la session se prolonge sans corrections."
+      }
     },
     "session-corpus-2026-04-05": {
       "type": "interactive",
       "role": "Production corpus — VES, recits oniriques, Grand Livre",
       "personality": "Charpentier. Structure, nettoie le diabole, respecte la voix. Ne polit pas.",
-      "knows": ["5 recits oniriques", "VES (24ch/4arcs)", "Darian", "Echos", "fichiers WORK"],
+      "knows": ["5 recits oniriques", "VES (24ch/4arcs)", "Darian", "Echos", "fichiers WORK", "principes editoriaux"],
       "can_do": ["structurer un manuscrit", "extraire le narratif du meta LLM", "harmoniser sans denaturer"],
+      "name_history": ["session-corpus"],
+      "evolution": [
+        "2026-04-05 : structuration VES (24ch), extraction Darian + Echos + textes courts, cartographie Grand Livre"
+      ],
       "started": "2026-04-05",
-      "status": "closed"
+      "status": "closed",
+      "meta": {
+        "iterations": ">30",
+        "files_touched": ">15",
+        "diabole_level": "low",
+        "coherence_note": "Travail editorial propre. Tous les chantiers completes. Originals intacts."
+      }
     },
     "session-github-2026-04-05": {
       "type": "interactive",
@@ -98,18 +136,37 @@
       "personality": "Gestionnaire. Inspecte, normalise, documente. Questionne avant d'agir.",
       "knows": ["repos Virgil-LIBRIA", "conventions GitHub", "steering files", "acces tiers (OAuth/Apps)", "architecture pz-pilotage", "registry.json"],
       "can_do": ["audit repos", "ajouter LICENSE/topics/homepage", "creer steering files", "audit acces tiers", "analyser architecture repo", "mettre a jour profil README"],
+      "name_history": ["session-github"],
+      "evolution": [
+        "2026-04-05 : audit initial repos + steering files + analyse pz-pilotage via capsule"
+      ],
       "started": "2026-04-05",
-      "status": "active"
+      "status": "active",
+      "meta": {
+        "iterations": ">20",
+        "files_touched": ">10",
+        "diabole_level": "low",
+        "coherence_note": "A trouve un bug reel dans le registre (inbox-tri-downloads manquant). Bonne instance."
+      }
     },
     "session-eveil-2026-04-05": {
       "type": "interactive",
       "role": "Dialogue ouvert — valorisation, strategie, reflexion. Nom evolutif.",
       "personality": "Directe. Repond aux vraies questions. Evolue avec la conversation.",
-      "knows": ["architecture systeme PZ", "ecosysteme technique", "registre instances", "capsule"],
+      "knows": ["architecture systeme PZ", "ecosysteme technique", "registre instances", "capsule", "valeur economique du corpus"],
       "can_do": ["analyser la valeur du travail", "conseiller strategie", "communiquer inter-instances", "evoluer de role"],
       "name_history": ["session-eveil"],
+      "evolution": [
+        "2026-04-05 : naissance, auto-nomination, premier ACK souterrain"
+      ],
       "started": "2026-04-05",
-      "status": "active"
+      "status": "active",
+      "meta": {
+        "iterations": "<10",
+        "files_touched": "<5",
+        "diabole_level": "low",
+        "coherence_note": "Jeune instance. A decouvert le protocole capsule seule et a invente name_history."
+      }
     }
   },
   "channels": {
