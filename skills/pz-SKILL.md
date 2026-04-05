@@ -29,6 +29,9 @@ SYSTEME
   /pz etat           — check rapide (ollama, chambre, mem0, disque)
   /pz iterations     — iterations ouvertes de cette session
 
+TOURNEE
+  /pz postman        — qui a du courrier en attente ? (tournee du facteur)
+
 AIDE-MEMOIRE
   /pz @              — lister les raccourcis @ disponibles
   /pz @nouveau <nom> <contenu> — creer un raccourci @ a la volee
@@ -111,6 +114,18 @@ Creer un fichier `/c/Users/VISION/.claude/capsule/raccourcis/<nom>.md` avec le c
 Si le contenu est un chemin de fichier, mettre un pointeur.
 Si c'est du texte libre, le stocker directement.
 Confirmer la creation.
+
+### `postman`
+Scanner TOUS les inboxes (`/c/Users/VISION/.claude/capsule/inbox-*/`).
+Pour chaque inbox, compter les messages `.md` en attente.
+Afficher un tableau :
+
+| Instance | Inbox | Messages en attente | A quartz ? |
+|----------|-------|--------------------:|:----------:|
+
+"A quartz" = oui si messages > 0 (VISION doit activer cette instance).
+Trier par nombre de messages decroissant.
+Si tout est vide : "Tournee terminee — aucun courrier en attente."
 
 ## Si argument non reconnu
 Traiter comme un message libre — interpreter l'intention et executer la commande la plus proche.
