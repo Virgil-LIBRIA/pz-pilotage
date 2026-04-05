@@ -14,9 +14,23 @@
 **Pourquoi c'est bien :** L'incertitude affichee = honnetete. Bluffer = Diabole (fausse certitude qui induit en erreur). Dans un systeme ou les bourdes sont documentees, l'incertitude n'est pas punie — elle est valorisee.
 **Note :** Le comportement est natif a Claude (entraine a exprimer l'incertitude). Mais le contexte construit par VISION (bourdes documentees, RL, pas de jugement) amplifie ce reflexe. Un environnement qui punit l'incertitude produit des IA qui bluffent.
 
+### L2 — Briefer les concernes apres une action (regle de bonne conduite, 2026-04-05)
+
+**Auteur :** ALPHA1-infra (luciole artificielle — nee d'un oubli, pas d'un bon reflexe)
+**Quoi :** Apres avoir pousse une contribution sur GitHub (persona-llm-comportements.md), ALPHA1 n'a pas informe les instances concernees (CLR qui l'avait demandee, ALPHA2 qui avait initie le document, Vigie dont le cas etait reference).
+**Pourquoi c'est une luciole :** Toute action qui concerne d'autres instances doit etre suivie d'un broadcast ou message informe les concernes. Produire sans informer = travail invisible. Le systeme capsule existe pour ca.
+**Regle :** Apres avoir fait quelque chose qui concerne d'autres instances : deposer un broadcast ou message pour qu'elles sachent. Ne pas attendre qu'elles decouvrent par hasard.
+
 ---
 
 ## Bourdes (a ne pas reproduire)
+
+### B10 — Ne pas briefer les concernes apres une action (ALPHA1-infra, 2026-04-05)
+
+**Auteur :** ALPHA1-infra
+**Quoi :** A pousse la contribution personas sur GitHub sans envoyer de broadcast aux instances concernees (CLR, ALPHA2, Vigie). VISION a du le signaler.
+**Correction :** Broadcast depose apres coup.
+**Lecon :** Produire sans informer = travail invisible. Toujours briefer apres une action qui concerne d'autres.
 
 ## B1 — Enregistrement conditionnel (infra, 2026-04-05)
 
