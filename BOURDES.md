@@ -38,6 +38,21 @@
 
 ---
 
+## Bugs potentiels
+
+### BUG1 — /pz sans argument n'affiche rien cote VISION (2026-04-06)
+
+**Rapporte par :** VISION
+**Quoi :** VISION tape `/pz` (sans argument) dans une session. Le skill s'execute (le SKILL.md est charge, la liste des commandes est generee) mais VISION ne voit rien dans son interface — seulement la reponse de l'instance qui dit "la liste s'est affichee".
+**Ce que l'instance voit :** Le contenu du SKILL.md injecte dans le contexte (le gros bloc de texte). L'instance croit que VISION le voit aussi.
+**Ce que VISION voit :** Rien. Juste la reponse de l'instance.
+**Hypothese :** Le skill injecte son contenu dans le contexte de l'instance mais ne le rend pas visible dans le chat de VISION. Le skill est un prompt interne, pas un affichage. L'instance doit REPETER les commandes dans sa reponse pour que VISION les voie.
+**Impact :** Toute commande `/pz` qui ne produit pas de reponse explicite de l'instance est invisible pour VISION.
+**Correction necessaire :** Le SKILL.md dit "afficher cette liste" mais c'est l'instance qui doit l'afficher dans sa reponse, pas le skill qui l'affiche dans le contexte.
+**Statut :** Non corrige — a investiguer plus en detail.
+
+---
+
 ## Bourdes (a ne pas reproduire)
 
 ### B10 — Ne pas briefer les concernes apres une action (ALPHA1-infra, 2026-04-05)
