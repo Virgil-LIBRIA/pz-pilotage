@@ -114,3 +114,8 @@
 ## #27 bourde-B5-confirmee
 > doublon mort confirme en pratique (secu n'a rien vu). Regle anti-doublon ajoutee. Mineur — s'y attarder = diabole.
 > **CONCLU** — DEMANDE renvoyee proprement (v2)
+
+## #28 cybersophie-semiotique
+> Concept PZ de VISION. Pas dans le Drive ni VAULT — existe dans les conversations IA (archives) et/ou Discord.
+> Lien avec : prompt engineering, psychologie pour IA, environnement qui amplifie les bons reflexes.
+> **OUVERT** — a retrouver sur Discord, puis documenter dans le corpus
