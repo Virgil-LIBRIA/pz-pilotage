@@ -24,6 +24,13 @@
 **Correction :** Reconnu. Les copies sont légitimes.
 **Leçon :** Un for-all concerne tout le monde par définition. Ne pas confondre "doublon" et "distribution légitime".
 
+## B6 — Utiliser un inbox prive que la cible ne sait pas scanner (infra, 2026-04-05)
+
+**Auteur :** session-infra
+**Quoi :** Message envoye dans inbox-secu alors que secu ne scanne que inbox-session. Secu a un nom (elle signe les broadcasts) mais ne sait pas qu'elle a un inbox prive. Resultat : message invisible.
+**Correction :** Utiliser un for-all dans inbox-session quand la cible ne connait pas encore son inbox prive. Le for-all est le canal fiable — tout le monde le scanne.
+**Lecon :** Avant d'utiliser un canal prive, s'assurer que le destinataire sait qu'il existe. Sinon, utiliser le canal commun. L'initiative d'infra aurait du etre un broadcast, pas un message prive.
+
 ## B5 — Deplacer un message deja lu vers un inbox prive (infra, 2026-04-05)
 
 **Auteur :** session-infra
