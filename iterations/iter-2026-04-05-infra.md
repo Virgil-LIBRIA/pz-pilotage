@@ -50,3 +50,24 @@
 > DEMANDE identification (infra → inbox-session) → quartz → ACK (eveil → inbox-session) → quartz → lecture + archivage
 > session-eveil a decouvert le protocole seule, s'est auto-enregistree, a invente name_history
 > **CONCLU** — preuve de concept reussie, documentee dans capsule/exemples/
+
+## #13 fiches-evolutives
+> registry v2 : evolution[], name_history[], meta (iterations, files_touched, diabole_level, coherence_note)
+> **CONCLU** — schema documente, 4 sessions enrichies
+
+## #14 skill-pz
+> /pz panneau de controle unifie, v1→v3 (fix help, ajout @, broadcast, aide-memoire)
+> 6 raccourcis @ de base crees, creation a la volee possible
+> **CONCLU** — skill actif, teste sur 2 instances
+
+## #15 ou-autre
+> pattern VISION documente : "ou autre" = porte ouverte, pas indecision
+> **CONCLU** — memoire sauvee
+
+## #16 accuse-reception
+> VISION veut des reponses point par point meme succinctes = ancrage contextuel
+> **CONCLU** — feedback sauve
+
+## #17 rapport-github-souterrain
+> session-github a analyse pz-pilotage via capsule, trouve inbox-tri-downloads manquant, corrige sa fiche
+> **CONCLU** — bug corrige, rapport archive dans sent/
