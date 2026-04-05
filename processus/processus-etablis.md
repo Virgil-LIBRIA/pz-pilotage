@@ -170,6 +170,30 @@
 
 ---
 
+## 8. Veille natif vs custom (anti-Diabole technique)
+
+**Contexte :** Claude Code evolue. Ce qui etait custom hier peut etre natif demain. Maintenir du custom redondant = Diabole (entropie par habitude).
+
+**Etapes :**
+1. A chaque mise a jour Claude Code : lire `ref/beats-veille-claude.md`
+2. Pour chaque composant custom : verifier si le natif fait maintenant le meme job
+3. Si natif couvre 100% → deprecier le custom
+4. Si natif couvre 80% → documenter les 20% restants qui justifient le custom
+5. Si pas de changement → rien a faire, silence = stabilite
+6. Mettre a jour la section "Historique des evolutions" dans beats-veille-claude.md
+
+**Renforcement positif :**
+- Audit initial (v2.1.92) : 0 composant redondant detecte. Tous les customs sont justifies.
+- La veille IA hebdomadaire integre maintenant la verification Claude Code (etape 3 du SKILL.md veille-ia).
+
+**Renforcement negatif :**
+- Ne PAS faire cette veille = accumuler du code mort sans le savoir. Le pire Diabole technique.
+
+**Signal de succes :** Un composant custom est deprecie parce que le natif fait mieux.
+**Signal d'echec :** On decouvre apres coup qu'on maintenait du custom redondant depuis des semaines.
+
+---
+
 ## Meta : comment maintenir ce fichier
 
 - Ajouter un processus quand une methode est validee par au moins une session reussie
