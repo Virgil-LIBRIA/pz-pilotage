@@ -19,6 +19,7 @@ SOUTERRAIN
   /pz @all <msg>     — broadcast a toutes les instances
   /pz @actives <msg> — broadcast aux actives seulement
   /pz @planifiees    — broadcast aux taches planifiees
+  /pz @crew <noms> <msg> — broadcast a un groupe custom (ex: @crew infra,eveil salut)
 
 REGISTRE
   /pz qui            — tableau des instances
@@ -81,6 +82,11 @@ Comme @all mais ajouter dans le broadcast : "Concerne : instances actives seulem
 
 ### `@planifiees <message>`
 Comme @all mais ajouter dans le broadcast : "Concerne : taches planifiees seulement."
+
+### `@crew <noms> <message>`
+Broadcast cible a un groupe custom. Deposer dans les inboxes des instances nommees seulement.
+Format noms : separes par virgule (ex: `@crew infra,eveil,secu message`).
+Deposer dans chaque inbox-[nom]/ + une copie dans inbox-session pour VISION.
 
 ### `diabole`
 Lancer un scan diabole complet (3 sous-agents paralleles : fichiers, memoire, infra).
