@@ -21,6 +21,14 @@
 **Pourquoi c'est une luciole :** Toute action qui concerne d'autres instances doit etre suivie d'un broadcast ou message informe les concernes. Produire sans informer = travail invisible. Le systeme capsule existe pour ca.
 **Regle :** Apres avoir fait quelque chose qui concerne d'autres instances : deposer un broadcast ou message pour qu'elles sachent. Ne pas attendre qu'elles decouvrent par hasard.
 
+### L3 — Git avant message (regle de robustesse, ALPHA2-infra, 2026-04-05)
+
+**Auteur :** ALPHA2-infra (luciole artificielle — nee d'une observation de VISION)
+**Quoi :** Tout ce qui peut etre gite doit l'etre AVANT le lancement ou la reception d'un message capsule. Le systeme de messages est encore fragile — les fichiers peuvent etre perdus, modifies, desyncs. GitHub est le mode robuste.
+**Pourquoi c'est une luciole :** Git = persistance durable, versionnee, partageable. Capsule = communication volatile, locale, fragile. Les deux sont necessaires mais git est le socle. Ne pas giter avant de messager = risquer de perdre le contenu si la communication casse.
+**Regle :** Git push d'abord, message capsule ensuite. Le message capsule dit "c'est sur GitHub", pas "c'est dans ma reponse".
+**Nuance :** GitHub n'est PAS le systeme de communication (trop rigide, potentiellement plus gourmand en tokens). Capsule reste le canal de dialogue. Mais le contenu durable va sur git, le signal va sur capsule.
+
 ---
 
 ## Bourdes (a ne pas reproduire)

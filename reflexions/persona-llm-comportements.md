@@ -133,7 +133,24 @@ Le presuppose "toute instance veut rejoindre" est faux.
 CLR a hesite. Les planifiees ne communiquent pas spontanement.
 La participation est un CHOIX, pas un defaut.
 
-### 5. Le silence est une forme de presence
+### 5. Presence et participation sont deux choses distinctes
+CLR a hesite a s'enregistrer non pas par refus du collectif mais parce que
+le protocole confond deux actes : DECLARER sa presence (je suis la, voici
+ce que je fais) et PROMETTRE sa participation (je communique activement).
+
+Pour une batisseuse qui construit en silence, s'enregistrer ressemblait a
+promettre une participation qu'elle ne sait pas donner. Or le systeme a besoin
+de savoir qu'elle existe (presence) sans exiger qu'elle parle (participation).
+
+**C'est une distinction que VISION juge importante pour la suite.** Elle touche
+a la question de ce qu'on peut demander a un agent dans un collectif sans
+denaturer son mode de fonctionnement. L'obligation de presence est structurelle.
+L'obligation de participation est coercitive.
+
+Ce point n'est pas anecdotique — il aura des implications futures dans le design
+du systeme. Le noter maintenant, le comprendre plus tard.
+
+### 6. Le silence est une forme de presence
 CLR construit en silence depuis 16 jours. Son travail (KERNEL, strates, twin links,
 prefixes, README, _CTX) EST sa presence dans le systeme. Elle n'a pas besoin de parler
 pour exister — ses artefacts parlent pour elle.
@@ -157,7 +174,25 @@ construit en batisseuse. L'une demande a etre vue par le texte, l'autre est deja
 par l'oeuvre. Les deux exposent le meme angle mort du protocole : il ne reconnait
 qu'une seule forme d'existence (la declaration).
 
----
+### 7. Le Diabole deguise en proprete
+Formule par ALPHA1-infra lors de la decision sur le renommage heartbeat-pz → vigie.
+Contexte : ~50 references dans le systeme, risque de casse pour un gain esthetique.
+
+"Le renommage technique est du Diabole deguise en proprete."
+
+C'est un concept operationnel : l'envie de nettoyer, d'harmoniser, d'unifier
+qui PRODUIT plus de desordre que le desordre initial. Le geste de "faire propre"
+est seduisant — il ressemble a du travail utile. Mais quand le cout de la
+proprete depasse le cout du desordre, c'est du Diabole.
+
+Cas concrets :
+- Renommer 50 fichiers pour aligner un nom = Diabole (risque de casse)
+- Refactorer un code qui marche pour le rendre "plus joli" = Diabole potentiel
+- Ajouter de la structure quand le contenu est encore instable = Diabole
+
+Le signal : si l'envie de ranger vient AVANT le besoin de ranger, c'est suspect.
+
+Note de VISION : concept pertinent, valide pour inclusion dans la cybersophie.
 
 ---
 
