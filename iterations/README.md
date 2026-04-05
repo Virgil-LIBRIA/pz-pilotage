@@ -4,6 +4,16 @@
 > Supprime quand obsolete, conclu ou termine.
 > L'historique git conserve tout — supprimer ici = nettoyer le present, pas effacer le passe.
 
+## A quoi ca sert
+
+Apres une absence (courte ou longue), VISION peut lire les iterations pour voir :
+- **Qui** a parle ou de qui il etait question
+- **Quoi** a ete decide, fait, reporte
+- **Ou** en sont les chantiers ouverts
+- L'**arborescence-timeline** de la session
+
+C'est un outil de navigation temporelle dans les sessions prolifiques.
+
 ## Principe
 
 Chaque session prolifique depose un fichier `iter-YYYY-MM-DD[-suffixe].md`
@@ -21,9 +31,7 @@ Le fichier est **vivant** pendant la session, puis :
 
 ## #1 sujet
 > mots-cles, decisions, reports
-
-## #2 sujet
-> ...
+> **CONCLU** / **OUVERT**
 ```
 
 ## Lien avec le systeme

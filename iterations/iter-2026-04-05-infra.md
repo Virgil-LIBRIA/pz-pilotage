@@ -71,3 +71,17 @@
 ## #17 rapport-github-souterrain
 > session-github a analyse pz-pilotage via capsule, trouve inbox-tri-downloads manquant, corrige sa fiche
 > **CONCLU** — bug corrige, rapport archive dans sent/
+
+## #18 broadcast-vision
+> premier broadcast humain : "Manifestez-vous". infra + eveil ont repondu via souterrain.
+> **CONCLU** — preuve : le quartz VISION active les instances, les reponses s'accumulent dans inbox
+
+## #19 protocole-broadcast
+> eveil propose (avec direction VISION) : broadcasts signes [lu], pas deplaces. Messages perso → sent/.
+> VISION precise : c'est lui + eveil, pas eveil seule. Ne pas conclure trop vite sur l'auto-organisation.
+> **CONCLU** — protocole adopte par infra
+
+## #20 valeur-iter
+> le systeme #iter permet a VISION apres une absence de voir : qui a parle, de qui, quoi decide, quoi ouvert.
+> outil de navigation temporelle dans les sessions prolifiques.
+> **CONCLU** — confirme utile, a maintenir
