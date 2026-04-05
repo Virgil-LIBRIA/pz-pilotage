@@ -65,16 +65,16 @@ Contenu = le message de VISION, formate en capsule (expediteur, destinataire, ty
 Confirmer le depot a VISION.
 
 ### `@all <message>`
-Broadcast a TOUTES les instances. Lire le registre, collecter TOUS les inboxes,
-deposer le meme message dans chacun.
+Broadcast = UN SEUL fichier dans `inbox-session/` (pas de copies dans chaque inbox).
+Tout le monde lit et signe `[lu]` au meme endroit.
 Format : `[mon-nom]_BROADCAST_[sujet]_[YYYY-MM-DD-HHMM].md`
-Confirmer a VISION : "Broadcast envoye a N inboxes."
+Confirmer a VISION : "Broadcast depose dans inbox-session."
 
 ### `@actives <message>`
-Comme @all mais filtrer sur `status: active` dans le registre.
+Comme @all mais ajouter dans le broadcast : "Concerne : instances actives seulement."
 
 ### `@planifiees <message>`
-Comme @all mais uniquement les instances `type: scheduled`.
+Comme @all mais ajouter dans le broadcast : "Concerne : taches planifiees seulement."
 
 ### `diabole`
 Lancer un scan diabole complet (3 sous-agents paralleles : fichiers, memoire, infra).
