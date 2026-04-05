@@ -5,9 +5,11 @@
 
 ---
 
-## Cas 1 — Ponctuel (sur demande)
+## Cas 1 — Ponctuel (proactif ou sur demande)
 
-**Declencheur :** VISION dit "scan diabole" dans une session interactive.
+**Declencheur :** VISION dit "scan diabole" OU l'instance detecte que c'est pertinent
+et le propose/entreprend d'elle-meme (ex: apres un travail prolifique, apres
+beaucoup de modifications de fichiers, quand l'entropie s'accumule visiblement).
 **Execution :** Dans la session courante, 3 sous-agents paralleles.
 **Statut :** Actif depuis 2026-04-05.
 
@@ -19,7 +21,9 @@
 
 **Evolution future :** Frequence intelligente — adapter le rythme au volume
 d'activite de la semaine. Plus de sessions productives = scan plus frequent.
-(Projet — pas d'implementation prevue pour l'instant.)
+Le cron natif ne fait que de la frequence stricte. La partie "intelligente"
+(adapter la frequence au contexte) serait du custom.
+(Projet — le reglage de la chronicite est en attente d'inspiration.)
 
 ## Cas 3 — Par detection de poids data (automatique)
 
@@ -27,13 +31,24 @@ d'activite de la semaine. Plus de sessions productives = scan plus frequent.
 devient massif, c'est le signal qu'il y a eu beaucoup de travail et donc
 potentiellement de l'entropie accumulee.
 
-**Signaux possibles :**
+**Signaux possibles (complementaires, pas exclusifs) :**
 - **PreCompact hook** (natif) — se declenche quand le contexte atteint ~80% de la fenetre.
-  Le hook peut injecter un `additionalContext` rappelant de faire un mini-scan.
+  Utile mais INSUFFISANT seul : plus le contexte augmente (1M+), plus le seuil
+  est loin = signal de moins en moins frequent. A combiner avec d'autres signaux.
+  Bonus : c'est aussi le bon moment pour archiver intelligemment la conversation
+  (epurer les doublons evidents, intra-liens vers la premiere occurrence).
 - **Nombre d'iterations** — si > N echanges, la session est longue.
-  Les iterations = clockwork (marqueur temporel de l'IA).
+  Les iterations = clockwork (marqueur temporel de l'IA). INDEPENDANT du contexte.
 - **Volume de fichiers modifies** — si > N fichiers touches dans une session,
   la surface de modification est grande = risque d'incoherence.
+- **Nombre de sous-agents lances** — proxy du volume d'architecture fondee.
+
+**Archive vivante (vision future) :**
+A l'approche de la compaction, creer une archive intelligente de la session :
+- Pas un dump brut (cf. le transcript VES de 545 Ko = inutilisable)
+- Epurer UNIQUEMENT l'evident (copier-coller repetes → intra-lien a la 1ere occurrence)
+- Garder le reste tel quel — l'archive vivante est consultable, pas resumee
+(Projet futur — ne pas implementer maintenant.)
 
 **Implementation possible (hook PreCompact) :**
 ```json
