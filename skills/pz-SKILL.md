@@ -45,10 +45,14 @@ Afficher le bloc de commandes ci-dessus. RIEN D'AUTRE.
 
 ### `?` ou `inbox`
 Scanner `/c/Users/VISION/.claude/capsule/inbox-session/` pour tout fichier `.md`.
-Pour chaque message : lire, afficher un resume, demander s'il faut traiter ou archiver.
-Si inbox vide : dire "Inbox vide." et rien d'autre.
-Apres traitement des messages perso, deplacer vers `sent/`.
-Les broadcasts restent (signer `[lu]` en bas).
+Pour chaque message :
+- Si NOUVEAU (pas encore signe par cette instance) : lire, afficher un resume, signer `[lu]`.
+- Si DEJA SIGNE : mentionner brievement ("N messages deja signes, contexte existant").
+- Messages perso adresses a cette instance : traiter puis deplacer vers `sent/`.
+- Broadcasts : signer `[lu]`, ne pas deplacer.
+Si zero fichier dans l'inbox : "Inbox vide — aucun fichier."
+Si fichiers mais tous deja signes : "Pas de nouveau courrier. N messages existants (contexte)."
+AUSSI scanner `inbox-[mon-nom]/` si l'inbox prive existe.
 
 ### `qui`
 Lire `/c/Users/VISION/.claude/capsule/registry.json`.
