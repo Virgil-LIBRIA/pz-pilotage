@@ -106,3 +106,11 @@
 ## #25 message-unique
 > un seul message par destination tant que pas quartze, modifiable = anti-diabole
 > **CONCLU** — pratique adoptee
+
+## #26 confirmation-resolution
+> besoin d'un [resolu] sur les DEMANDES. Meme pattern que [lu]. Documente dans PROTOCOLE-BROADCAST.md
+> **CONCLU**
+
+## #27 bourde-B5-confirmee
+> doublon mort confirme en pratique (secu n'a rien vu). Regle anti-doublon ajoutee. Mineur — s'y attarder = diabole.
+> **CONCLU** — DEMANDE renvoyee proprement (v2)
