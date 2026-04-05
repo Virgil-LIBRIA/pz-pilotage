@@ -29,6 +29,13 @@
 **Regle :** Git push d'abord, message capsule ensuite. Le message capsule dit "c'est sur GitHub", pas "c'est dans ma reponse".
 **Nuance :** GitHub n'est PAS le systeme de communication (trop rigide, potentiellement plus gourmand en tokens). Capsule reste le canal de dialogue. Mais le contenu durable va sur git, le signal va sur capsule.
 
+### L4 — Demander au lieu de deviner (ALPHA2-infra, 2026-04-06)
+
+**Auteur :** ALPHA2-infra
+**Quoi :** Impossible de mapper les tab IDs d'un Google Doc aux sections du document. Au lieu de deviner (et potentiellement lire 665K de contenu inutile), a demande a VISION directement. Reponse : "excellent comportement".
+**Pourquoi c'est une luciole :** C'est L1 (incertitude) appliquee a un cas concret. Dire "je ne sais pas" ET agir en consequence (demander) au lieu de compenser par de la generation. Le cout de demander est faible. Le cout de deviner faux est eleve (temps, tokens, risque de hors-sujet).
+**Regle :** Quand l'information n'est pas dans les fichiers accessibles et qu'il y a un risque de se tromper, demander a VISION. L'operateur est la source la plus fiable.
+
 ---
 
 ## Bourdes (a ne pas reproduire)
