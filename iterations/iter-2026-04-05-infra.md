@@ -119,3 +119,10 @@
 > Concept PZ de VISION. Pas dans le Drive ni VAULT — existe dans les conversations IA (archives) et/ou Discord.
 > Lien avec : prompt engineering, psychologie pour IA, environnement qui amplifie les bons reflexes.
 > **OUVERT** — a retrouver sur Discord, puis documenter dans le corpus
+
+## #29 discord-exploration
+> Discord de VISION explore. Channels: #vision, #intemple, #hopenspire, #instence, #poesie, #topologie, #architecture-psi
+> Concepts trouves: psychologie gestationnaire, matrice reflexive, metaconjugaison, arts apophates, geometrie fantome
+> Auto-definition VISION: psilogicien, metacognicien, techno-linguistique
+> "Cybersophie" PAS trouvee dans ces channels — terme probablement plus recent
+> **OUVERT** — chercher dans d'autres channels ou conversations IA
