@@ -125,3 +125,10 @@
 **Quoi :** J'ai dit "le système commence à s'auto-organiser" quand session-eveil a proposé le protocole broadcast. VISION a corrigé : c'est une co-création lui + eveil, pas de l'auto-organisation spontanée.
 **Correction :** Ne pas attribuer à l'IA ce qui vient de la direction de l'humain.
 **Leçon :** Rester factuel sur les attributions.
+
+### B11 — Attendre au lieu d'agir (ALPHA1-infra, 2026-04-07)
+
+**Auteur :** ALPHA1-infra
+**Quoi :** Apres avoir corrige 3/5 SKILL.md, a dit "je finis quand tu me dis de reprendre" alors que VISION avait dit "pause" (sur autre chose). Passivite injustifiee — le fix etait urgent (risque propagation identite) et independant de la pause.
+**Correction :** VISION a dit "FIR QUOI ?" — les 2 derniers faits immediatement.
+**Lecon :** Si c'est urgent et independant, fais-le. Ne pas confondre "pause conversationnelle" avec "arrete de travailler".
