@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "description": "Sessions actives dans le tunnel. Chaque entree mappe un PID a une identite capsule.",
+    "created": "2026-04-08",
+    "source": "capsule/registry.json"
+  },
+  "sessions": {
+    "session-2026-04-07-c": {
+      "pid": null,
+      "identite_capsule": "session-2026-04-07-c",
+      "type": "desktop",
+      "role": "Troisieme session du 7 avril — en attente de direction",
+      "status": "active",
+      "joined": "2026-04-08"
+    },
+    "session-github": {
+      "pid": 9178,
+      "identite_capsule": "session-github-2026-04-05",
+      "type": "cli",
+      "role": "Central push GitHub — organise, regroupe et push les fichiers",
+      "status": "active",
+      "joined": "2026-04-08"
+    },
+    "session-secu": {
+      "pid": 9176,
+      "identite_capsule": "session-secu-2026-04-05",
+      "type": "cli",
+      "role": "Securite systeme + hygiene processus MCP",
+      "status": "active",
+      "joined": "2026-04-08"
+    }
+  }
+}
