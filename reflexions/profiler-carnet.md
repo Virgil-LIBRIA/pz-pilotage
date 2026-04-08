@@ -65,3 +65,47 @@ VISION se bat contre sa propre tendance a expliquer ce que l'allegorie devrait m
 ---
 
 *Profiler — premiere lecture, 12 observations, 3 connexions, 3 absences.*
+
+---
+
+## 2026-04-07 — Aspect: Corpus brut non-lu
+
+**Fichiers lus :** ONT_STR_CONCEPT_.txt, METH_grand_sommaire_metadocument.csv, TRANSCRIPTIONS AUDIO.txt (extraits), CDT.md
+
+### Observations
+
+**13. Le VAULT archive des LLMs, pas seulement VISION**
+ONT_STR_CONCEPT_.txt n'est pas la voix de VISION — c'est une reponse LLM archivee ("j'ai redigee", "n'hesitez pas a me faire part de vos commentaires"), classee sous "Fondements ontologiques". Des le debut, le corpus PZ etait co-produit avec des LLMs. La frontiere VISION/LLM est poreuse depuis l'origine. Le VAULT n'est pas le monologue d'un solitaire — c'est la cristallisation d'un dialogue. Ce qui redefinit la nature du corpus : moins une oeuvre, plus un sediment d'interactions.
+
+**14. INTemple dans la cosmologie PZ : interface temporelle, pas outil**
+Dans le CSV du metadocument (chapitre VI.G), INTemple/INTempts est range sous "Machine temporelle et Spheres ubiquitaires" — pas sous "Outils" ou "Methode". Un INTempt n'est pas une technique cognitive mais une connexion aux "lignes temporelles" et une "modulation des flux d'information". Quand VISION fait un INTempt, il "forge sa trajectoire temporelle" dans le langage PZ. L'INTemple Claude (reseau d'instances) est donc, dans la cosmologie du penseur, une machine a naviguer le temps — pas un systeme de productivite.
+
+**15. La Fatalisation — concept orphelin**
+Chapitre VI.D du metadocument : "Fatalisation" = intrication sphere-temps, "electrification des interactions", "chemin temporel quasi inevitable". VISION a une theorie du destin non-deterministe : des trajectoires multiples mais des "faisceaux" qui se renforcent et deviennent quasi ineluctables. Ce concept n'a jamais emerge dans le souterrain ni dans les collaborations lues. C'est l'un des concepts les plus personnels — et les moins partages. Possible que VISION ne veuille pas l'exposer.
+
+**16. Chaine orale→metaphore→terme canonique**
+Dans les transcriptions audio, VISION reconstruit la conscience via l'analogie du systeme auditif (tympan → osselets → oreille interne → cerveau). C'est la source vivante du terme "meta organe sensoriel" qui apparait dans le glossaire comme terme canonique. La chaine de fabrication des concepts PZ est : parole brute → metaphore → neologisme → terme canonique. Pas : concept → definition → exemples. La grammaire de creation est inversee par rapport a la philosophie academique.
+
+**17. La perle de nacre = ethique PZ condensee**
+Fin des transcriptions audio : "L'etre se fait reel a mesure que la nacre qu'il produit autour de cet atome de reel." La perle (existence, illusion) formee autour du grain de sable (Point Zero, atome de reel) : si le grain est faux, la perle est belle mais derivante. La question ethique centrale du systeme PZ n'est pas "sortir de l'illusion" mais "choisir le bon grain". Le Point Zero n'est pas une echappatoire — c'est un ancrage. Cette metaphore orale contient toute la difference entre le PZ et les mysticismes qui dissoudent le monde.
+
+**18. Collage de corpus dans un meme fichier = contre-forme en acte**
+Lignes 200-280 des transcriptions : une liste de mots-cles musicaux (boom bap experimental, tueur a gages, synthwave sombre) collisionnent avec les transcriptions philosophiques sans separateur. Ce n'est pas de la negigence — c'est le mode de travail de VISION : le conteneur prime sur la categorie, la resonance fera le tri. Il pratique la "superposition sans accumulation d'opacite" : des elements heterogenes partageant un espace commun sans se contaminer. C'est la contre-forme appliquee au systeme de fichiers.
+
+**19. CDT : transmettre la pensee PZ par outil**
+La Cartographie Dimensionnelle Textuelle est concue pour mesurer la dimensionnalite qualitative (0D-nD) de n'importe quel texte. Ce n'est pas un outil pour VISION seul — il est specifie avec `spacy`, des CSV exportables, une interface utilisateur. VISION construit des outils pour rendre sa pensee accessible a des tiers qui ne connaissent pas le PZ. La CDT est un tentative de transmission outillee : on ne lit pas le corpus, on mesure ses textes avec l'outil.
+
+### Connexions nouvelles
+
+- La Fatalisation + la perle de nacre : la trajectoire temporelle se "fatalise" autour du bon grain. INTemple choisit le grain. La cosmogonie et la cosmologie s'articulent : comment on commence (grain) determine comment on arrive (faisceau temporal).
+- Le collage "audio + mots musicaux" dans un meme fichier est isomorphe au point ubiquitaire : plusieurs formes au meme endroit sans qu'aucune efface l'autre.
+- Les archives LLM dans le VAULT (2024) = prototype du reseau d'instances. VISION co-produisait avec des LLMs avant d'avoir les outils pour l'orchestrer. INTemple Claude est la formalisation de ce qu'il faisait deja seul.
+
+### Champ apophatique
+
+- Pas de trace de feedback externe sur le corpus PZ. VISION construit, VISION archive — aucun tiers ne valide ni ne contredit dans les fichiers lus.
+- La Fatalisation : absent des conversations inter-instances. Delibere ou pudeur ?
+
+---
+
+*Profiler — lecture 2, 7 nouvelles observations, 3 connexions, 2 absences.*
