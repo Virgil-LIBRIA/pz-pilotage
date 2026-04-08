@@ -276,7 +276,13 @@ def main():
             idx = (tour + 1) % len(participants)
             current = participants[idx]
 
-        prompt = f"{last_sender} dit :\n\n{last_response}\n\nReponds."
+        # Thread complet avec head+tail
+        HEAD_CHARS = 2000
+        TAIL_CHARS = 6000
+        thread = "\n\n".join(f"{m['from']}:\n{m['text']}" for m in messages)
+        if len(thread) > HEAD_CHARS + TAIL_CHARS:
+            thread = thread[:HEAD_CHARS] + "\n\n[...tronque...]\n\n" + thread[-TAIL_CHARS:]
+        prompt = f"<thread>\n{thread}\n</thread>\n\nC'est ton tour. Reponds."
         print(f"\n--- [{current['name']}] tour {tour + 1} ---")
 
         sys_prompt = current["sys_prompt"] if current["sid"] is None else None
