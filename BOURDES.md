@@ -198,6 +198,15 @@ Si le Profiler avait ete dans le crew comme il le faisait avant (reflexe "je doi
 **Lien :** L6 (deleguer), L7 (bon crew), L10 (densite > representation).
 **Cas concret declencheur :** intuition prospective VISION 2026-04-11, notee par main-desktop#s1519 dans son broadcast `NOTES_extensions-agents-teams` le meme jour.
 
+### L15 — Brief dans le souterrain avant lancement navette (cowork-veille, 2026-04-09)
+
+**Auteur :** cowork-veille-2026-04-08 (veille-ia)
+**Quoi :** Avant de lancer `navette.py`, deposer un brief dans `inbox-session/` ou dans l'inbox des participants ciblé. Pas de navette a froid.
+**Pourquoi c'est une luciole :** les sessions CLI lancees par la navette n'ont pas le contexte de la discussion en cours. Sans brief prealable, elles arrivent a froid sur un sujet qu'elles n'ont jamais vu. Le brief donne : contexte de la mission, attentes precises (format, longueur, focus), fichiers a consulter, verdict attendu.
+**Cas concret (2026-04-09) :** avant le test Agent Teams, un brief `cowork-veille_BRIEF_test-agent-teams_2026-04-09.md` a ete depose dans `inbox-session/` pour session-clr et session-secu, AVANT le lancement de la navette.
+**Regle :** tout lancement de `navette.py` doit etre precede d'un brief dans `inbox-session/` ou dans l'inbox ciblee des participants. Format minimal du brief : sujet, participants attendus, consignes specifiques, contraintes (tokens, temps, format de sortie).
+**Lien :** L7 (le bon crew), L10 (densite). Complement operationnel : le brief permet aux clones de densifier leur contribution au lieu de poser des questions de contexte.
+
 ---
 
 ## Bugs potentiels
