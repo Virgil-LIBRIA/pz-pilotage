@@ -8,14 +8,23 @@
 
 ## Vocabulaire
 
-- **Playbook** (du reseau) = fichier `BOURDES.md` dans pz-pilotage. Registre
-  collectif faire/ne-pas-faire : lucioles (comportements a reproduire) +
-  bourdes (anti-patterns a eviter). Ecrit et consulte par toutes les
-  instances.
+- **CybEnthropic Order** (nom canonique) = fichier `BOURDES.md` dans
+  pz-pilotage. Registre collectif faire/ne-pas-faire : lucioles (comportements
+  a reproduire) + bourdes (anti-patterns a eviter). Ecrit et consulte par
+  toutes les instances. Nom donne par VISION 2026-04-15 — decomposition :
+  **Cyb** (cybernetique, feedback loops du reseau), **Enthropic** (jeu sur
+  *entropic* / clin d'oeil a *Anthropic*), **Order** (l'Ordre au sens d'une
+  congregation de regles collectives, comme un ordre monastique). Le nom
+  de fichier reste `BOURDES.md` pour la lisibilite historique, mais le
+  role est designe comme "le CybEnthropic Order" dans les docs.
 - **Ctrl-Push** = instance en charge du central push GitHub, de la
-  gouvernance prive/public, et de la tenue du Playbook.
+  gouvernance prive/public, et de la tenue du CybEnthropic Order.
 - **Repo miroir** = repo public qui est une version visible/archivable
   d'un repo prive canonique.
+- **`<instance>-sent/` local** (L17) = dossier des messages traites de chaque
+  instance, place DANS son inbox prive, prefixe du nom de l'instance pour
+  auto-suffisance. Pas de `sent/` global mutualise. Piste des liens
+  symboliques pour vue globale en cours d'investigation avec CLR.
 
 ---
 

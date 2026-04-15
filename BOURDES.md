@@ -233,6 +233,63 @@ Notification : [ou la reponse a ete deposee — inbox-X, broadcast, etc.]
 **Corollaire operationnel :** les scripts batch qui deplacent plusieurs fichiers doivent aussi annoter. Ne pas traiter le deplacement comme une action isolee — c'est une sous-etape de "marquer comme traite".
 **Lien :** L2 (briefer apres action) — L16 est une application locale : annoter = briefer le futur lecteur. L8 (relayer verbatim) — l'annotation ne remplace pas le verbatim original, elle s'ajoute en bas. Anti-B5 (ne pas deplacer un message deja lu sans justification) — L16 donne la justification via l'annotation.
 
+### L17 — Structure sent/ locale par instance, pas globale (Ctrl-Push + VISION, 2026-04-15)
+
+**Auteur :** Ctrl-Push + VISION (validation directive explicite)
+**Quoi :** Chaque instance conserve ses messages traites dans un sous-dossier
+`<nom-instance>-sent/` situe **dans son propre inbox**, pas dans un
+`sent/` mutualise a la racine du souterrain.
+
+**Exemple canonique :**
+```
+_souterrain/
+├── inbox-Ctrl-Push (session-GitHub)/
+│   ├── (messages en attente)
+│   └── Ctrl-Push-sent/           ← historique local annote L16
+├── inbox-profiler-pz/
+│   ├── (messages en attente)
+│   └── profiler-sent/            ← idem
+└── ...
+```
+
+**Pourquoi c'est une luciole :** un `sent/` global mutualise cree trois
+problemes :
+1. **Invisibilite locale** : quand on ouvre `inbox-X/`, on voit 0 message
+   (en attente) et 0 historique — le dossier semble mort. Pas de signal
+   de presence.
+2. **Lecture par instance impossible sans filtrage** : pour voir l'historique
+   d'une instance specifique, il faut fouiller un `sent/` mutualise qui
+   contient 66 fichiers de 15 instances. Pas d'ergonomie.
+3. **Ambiguite du proprietaire** : qui a traite quoi dans le dossier
+   mutualise ? L'annotation L16 resout ca, mais le dossier lui-meme ne
+   le dit pas visuellement.
+
+**Regle :**
+1. Chaque instance ayant un inbox privé doit creer un sous-dossier
+   `<nom-instance>-sent/` DANS son inbox (pas a la racine du souterrain)
+2. Le prefixe `<nom-instance>-` rend le nom auto-suffisant : si le
+   dossier est deplace ailleurs, l'info "a qui appartient cet historique"
+   reste visible
+3. Apres traitement d'un message (mv inbox-X/msg.md → <instance>-sent/),
+   appliquer L16 (annoter avec `[traite] <nom-instance> | <date>`)
+
+**Corollaire pour VISION / diabole / audit :**
+Pour une vue globale cross-instances, la piste des **liens** a explorer
+(VISION 2026-04-15 : *"l'idée de liens est une piste, parles-en à CLR
+elle saura de quoi je parle"*). Demande envoyee a CLR — solution
+documentee ici quand retour recu.
+
+**Lien :** L2 (briefer apres action — ici briefer le futur lecteur par
+la structure du dossier). L16 (annotation des messages traites — L17
+donne le dossier, L16 donne l'annotation). Anti-B5 (ne pas deplacer
+sans justification — L17 donne une structure de destination claire).
+
+**Cas concret (2026-04-15) :** Ctrl-Push a migre 8 messages du `sent/`
+global vers `inbox-Ctrl-Push (session-GitHub)/Ctrl-Push-sent/`. VISION
+a pointe le probleme en direct : *"cest vide aucun dossier, sent est
+absent (si il y etait), tu avait bien des messages dedans ?"*.
+Le `sent/` mutualise etait le probleme — invisible depuis l'inbox locale.
+
 ---
 
 ## Bugs potentiels
