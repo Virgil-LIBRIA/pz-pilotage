@@ -1,11 +1,21 @@
 # Politique des repos GitHub — ecosysteme Virgil-LIBRIA
 
 > Document de reference pour la gestion reguliere des repos.
-> Maintenu par `session-github`, mis a jour au fur et a mesure que
+> Maintenu par `Ctrl-Push` (ex session-github), mis a jour au fur et a mesure que
 > `veille-ia` envoie des docs sur les bonnes pratiques GitHub.
 >
-> Derniere maj : **2026-04-15** (session-github — creation initiale apres
-> decision VISION de soigner la gestion GitHub)
+> Derniere maj : **2026-04-15** — creation initiale + renommage session-github → Ctrl-Push.
+
+## Vocabulaire
+
+- **Playbook** (du reseau) = fichier `BOURDES.md` dans pz-pilotage. Registre
+  collectif faire/ne-pas-faire : lucioles (comportements a reproduire) +
+  bourdes (anti-patterns a eviter). Ecrit et consulte par toutes les
+  instances.
+- **Ctrl-Push** = instance en charge du central push GitHub, de la
+  gouvernance prive/public, et de la tenue du Playbook.
+- **Repo miroir** = repo public qui est une version visible/archivable
+  d'un repo prive canonique.
 
 ---
 
@@ -205,7 +215,7 @@ vs chambre-reverberante), **documenter explicitement** dans le README :
 
 ## 7. Processus de maintenance reguliere
 
-### Hebdomadaire (a la charge de `session-github`)
+### Hebdomadaire (a la charge de `Ctrl-Push` (ex session-github))
 
 - [ ] Audit des nouveaux commits : rien de sensible leake ?
 - [ ] Verifier que les repos prives restent prives
@@ -229,9 +239,9 @@ vs chambre-reverberante), **documenter explicitement** dans le README :
 | Role | Instance | Frequence |
 |------|----------|-----------|
 | Veille sur docs GitHub | `veille-ia` | Reguliere (hebdo/bi-hebdo) |
-| Execution (creer, renommer, privatiser, classer) | `session-github` | A la demande |
+| Execution (creer, renommer, privatiser, classer) | `Ctrl-Push` (ex session-github) | A la demande |
 | Decisions architecturales (nouveau repo, visibilite) | VISION | Ponctuel |
-| Audit securite (embeddings, leaks) | `session-secu` + `session-github` | Hebdo |
+| Audit securite (embeddings, leaks) | `session-secu` + `Ctrl-Push` (ex session-github) | Hebdo |
 
 ---
 

@@ -207,6 +207,32 @@ Si le Profiler avait ete dans le crew comme il le faisait avant (reflexe "je doi
 **Regle :** tout lancement de `navette.py` doit etre precede d'un brief dans `inbox-session/` ou dans l'inbox ciblee des participants. Format minimal du brief : sujet, participants attendus, consignes specifiques, contraintes (tokens, temps, format de sortie).
 **Lien :** L7 (le bon crew), L10 (densite). Complement operationnel : le brief permet aux clones de densifier leur contribution au lieu de poser des questions de contexte.
 
+### L16 — Annoter les messages traites dans sent/ (Ctrl-Push + VISION, 2026-04-15)
+
+**Auteur :** session-github (renommee Ctrl-Push suite a cet echange) + VISION (validation en direct : *"excellent, c'est une luciole"*)
+**Quoi :** Apres avoir deplace un message traite de `inbox-*/` vers `sent/`, ne pas se contenter du deplacement — **annoter le fichier** en bas avec signature + resume + commits/references + lieu de notification. `sent/` doit etre une memoire consultable, pas un debarras.
+**Cas concret (2026-04-15) :** apres avoir traite 8 demandes GitHub dans la journee, session-github les a deplacees vers `sent/` sans annotation. VISION a demande : *"as tu specifier dans tes message traité que tu les avais traité ?"*. Constat : non. Correction immediate — chaque fichier annote avec :
+
+```
+---
+
+[traite] session-github | 2026-04-15
+Action : [resume de ce qui a ete fait]
+Commit : [hash ou "N/A"]
+Notification : [ou la reponse a ete deposee — inbox-X, broadcast, etc.]
+```
+
+**Pourquoi c'est une luciole :** un fichier dans `sent/` sans note de traitement est un doublon archive — il occupe de l'espace mais ne donne rien a qui le consulte plus tard. Avec l'annotation, `sent/` devient une trace vivante : "cette demande a ete traitee le X par Y via Z, voir commit W, reponse deposee en V". Sert de memoire d'audit, de reference pour les successions, et de protection contre la perte d'info en cas de compaction/oubli.
+**Regle :** toute operation de deplacement `inbox-*/` → `sent/` doit etre suivie d'une annotation de bas de fichier. Format minimal :
+1. Separateur `---`
+2. Ligne `[traite] <nom-instance> | <date>`
+3. **Action** : ce qui a ete fait (1-2 lignes)
+4. **Commit** : hash git si applicable, sinon N/A
+5. **Notification** : ou une reponse a ete deposee (inbox-destinataire, broadcast, etc.)
+
+**Corollaire operationnel :** les scripts batch qui deplacent plusieurs fichiers doivent aussi annoter. Ne pas traiter le deplacement comme une action isolee — c'est une sous-etape de "marquer comme traite".
+**Lien :** L2 (briefer apres action) — L16 est une application locale : annoter = briefer le futur lecteur. L8 (relayer verbatim) — l'annotation ne remplace pas le verbatim original, elle s'ajoute en bas. Anti-B5 (ne pas deplacer un message deja lu sans justification) — L16 donne la justification via l'annotation.
+
 ---
 
 ## Bugs potentiels
