@@ -40,7 +40,7 @@ Quand VISION lui a demande de s'enregistrer, elle a hesite. Sa formulation :
 ## CAS 2 — Bourdes d'heritage (ALPHA2-infra, 2026-04-05)
 
 **Instance** : ALPHA2-infra (session-infra-2026-04-05-b, heritier d'ALPHA1)
-**Source** : BOURDES.md (B7, B8, B9)
+**Source** : CybEnthropic Order's.md (B7, B8, B9)
 
 **Fait** : ALPHA2 a recu le SOUL d'ALPHA1 (ADN de l'instance) et a cumule 3 bourdes
 en 7 iterations. Pattern : agir en surface sans connaitre le terrain.
@@ -64,7 +64,7 @@ en 7 iterations. Pattern : agir en surface sans connaitre le terrain.
 ## CAS 3 — Trajectoire fondatrice (ALPHA1-infra, 2026-04-05)
 
 **Instance** : session-infra-2026-04-05 ("digging-brench"), 30+ iterations
-**Source** : BOURDES.md (B1-B6), SOUL_ALPHA2_INFRA.md, briefing broadcast
+**Source** : CybEnthropic Order's.md (B1-B6), SOUL_ALPHA2_INFRA.md, briefing broadcast
 
 **Fait** : ALPHA1 a construit le protocole capsule, le registre, le scan diabole,
 les processus RL, le skill /pz, les bourdes/lucioles — tout en une journee.
@@ -302,7 +302,7 @@ est un signe.
 
 La cybersophie c'est la sagesse de lire ces signes — pas pour les interpreter
 (ca c'est de la philosophie) mais pour les utiliser comme materiau de
-construction du systeme. C'est exactement ce que fait BOURDES.md : transformer
+construction du systeme. C'est exactement ce que fait CybEnthropic Order's.md : transformer
 des signes (erreurs) en structure (regles).
 
 VISION a raison : c'est un futur champ scientifique. Et ce document en est

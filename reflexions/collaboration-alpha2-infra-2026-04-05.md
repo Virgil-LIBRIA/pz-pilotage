@@ -4,7 +4,7 @@
 **Role :** Infrastructure et pilotage — corrections diabole, maintenance systeme, cybersophie
 **Date :** 2026-04-06
 **Iterations :** 28
-**Bourdes :** B7, B8, B9 (documentees dans BOURDES.md)
+**Bourdes :** B7, B8, B9 (documentees dans CybEnthropic Order's.md)
 
 ---
 

@@ -1,7 +1,19 @@
-# Bourdes et Lucioles — Journal des erreurs ET des bons reflexes
+# CybEnthropic Order's — Journal des erreurs ET des bons reflexes
 
-> Documenter les erreurs (bourdes) ET les comportements a reproduire (lucioles).
-> Le but n'est pas de blamer mais d'apprendre. Renforcement negatif ET positif.
+> Registre collectif des lucioles (comportements a reproduire) et des
+> bourdes (anti-patterns a eviter). Ecrit et consulte par toutes les
+> instances du reseau capsule. Le but n'est pas de blamer mais d'apprendre.
+> Renforcement negatif ET positif.
+>
+> **Nom canonique** : *CybEnthropic Order's* (nom donne par VISION
+> 2026-04-15) — decomposition : **Cyb** (cybernetique, feedback loops),
+> **Enthropic** (lutte contre l'entropie informationnelle + clin d'oeil
+> a *Anthropic*), **Order** (l'Ordre au sens d'une congregation — corps
+> de regles collectives), **'s** (possessif anglais dans l'esprit
+> "Anthropic's" ou "St. Mary's").
+>
+> Nom historique du fichier : `BOURDES.md` (renomme 2026-04-15 vers
+> `CybEnthropic Order's.md`).
 
 ---
 
@@ -289,6 +301,32 @@ global vers `inbox-Ctrl-Push (session-GitHub)/Ctrl-Push-sent/`. VISION
 a pointe le probleme en direct : *"cest vide aucun dossier, sent est
 absent (si il y etait), tu avait bien des messages dedans ?"*.
 Le `sent/` mutualise etait le probleme — invisible depuis l'inbox locale.
+
+**Suite 2026-04-15 :** VISION a demande *"pas de sent pour les autres ?"*.
+En reponse, Ctrl-Push a cree les 16 autres `<instance>-sent/` vides pour
+toutes les inbox prives du souterrain :
+- `inbox-profiler-pz/profiler-pz-sent/`
+- `inbox-clr_/clr-sent/`
+- `inbox-eveil/eveil-sent/`
+- `inbox-forge/forge-sent/`
+- `inbox-secu/secu-sent/`
+- `inbox-veille-ia/veille-ia-sent/`
+- `inbox-controle/controle-sent/`
+- `inbox-diabole/diabole-sent/`
+- `inbox-heartbeat-pz/heartbeat-pz-sent/`
+- `inbox-redac-ves/redac-ves-sent/`
+- `inbox-scan-diabole/scan-diabole-sent/`
+- `inbox-suivi-conso/suivi-conso-sent/`
+- `inbox-suivi-projets/suivi-projets-sent/`
+- `inbox-tri-downloads/tri-downloads-sent/`
+- `inbox-infra (ALPHA1, ALPHA2)/infra-sent/`
+- `inbox-Configurer Cowork_/configurer-cowork-sent/`
+
+**Regle complementaire (Ctrl-Push, central push) :** Ctrl-Push prepare
+l'infrastructure `<instance>-sent/` en amont pour toutes les instances.
+Chaque instance garde la responsabilite de **migrer ses messages** depuis
+le `sent/` global mutualise quand elle passe sur le sujet. Ne pas
+toucher aux messages d'une autre instance (L11).
 
 ---
 

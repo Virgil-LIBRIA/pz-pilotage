@@ -8,15 +8,18 @@
 
 ## Vocabulaire
 
-- **CybEnthropic Order** (nom canonique) = fichier `BOURDES.md` dans
-  pz-pilotage. Registre collectif faire/ne-pas-faire : lucioles (comportements
-  a reproduire) + bourdes (anti-patterns a eviter). Ecrit et consulte par
-  toutes les instances. Nom donne par VISION 2026-04-15 — decomposition :
+- **CybEnthropic Order's** (nom canonique) = fichier
+  `CybEnthropic Order's.md` dans pz-pilotage. Registre collectif
+  faire/ne-pas-faire : lucioles (comportements a reproduire) + bourdes
+  (anti-patterns a eviter). Ecrit et consulte par toutes les instances.
+  Nom donne par VISION 2026-04-15 — decomposition :
   **Cyb** (cybernetique, feedback loops du reseau), **Enthropic** (jeu sur
-  *entropic* / clin d'oeil a *Anthropic*), **Order** (l'Ordre au sens d'une
-  congregation de regles collectives, comme un ordre monastique). Le nom
-  de fichier reste `BOURDES.md` pour la lisibilite historique, mais le
-  role est designe comme "le CybEnthropic Order" dans les docs.
+  *entropic* / clin d'oeil a *Anthropic*), **Order** (l'Ordre au sens
+  d'une congregation de regles collectives, comme un ordre monastique),
+  **'s** (possessif anglais, forme "d'un corps constitue" — comme
+  "St. Mary's" ou "Anthropic's"). Le fichier a ete renomme de `BOURDES.md`
+  vers `CybEnthropic Order's.md` le 2026-04-15. Le role dans les docs
+  est "le CybEnthropic Order's" (ou plus court "l'Order's").
 - **Ctrl-Push** = instance en charge du central push GitHub, de la
   gouvernance prive/public, et de la tenue du CybEnthropic Order.
 - **Repo miroir** = repo public qui est une version visible/archivable

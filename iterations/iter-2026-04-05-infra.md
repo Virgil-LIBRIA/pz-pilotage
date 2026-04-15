@@ -91,7 +91,7 @@
 > **CONCLU** — gite, pas de collision avec @ natif
 
 ## #22 bourdes
-> BOURDES.md sur GitHub, 4 erreurs infra documentees (enregistrement conditionnel, inbox commune, broadcasts=bruit, auto-organisation)
+> CybEnthropic Order's.md sur GitHub, 4 erreurs infra documentees (enregistrement conditionnel, inbox commune, broadcasts=bruit, auto-organisation)
 > **CONCLU** — renforcement negatif versionne
 
 ## #23 postman-strategique

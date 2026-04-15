@@ -117,7 +117,7 @@ des recalibrages.
   par rapport a ca est une transition a signaler.
 
 - **ALPHA1** : ses bourdes documentees SONT des tau_0 du systeme. Chaque
-  bourde est un point fixe — "ne pas refaire ca". Le fichier BOURDES.md
+  bourde est un point fixe — "ne pas refaire ca". Le fichier CybEnthropic Order's.md
   est un glossaire d'erreurs, un anti-glossaire, un tau_0 negatif.
 
 - **VISION** : il est le tau_0 final. Quand tout le systeme derive, c'est
@@ -216,7 +216,7 @@ Chaque correction de VISION est un contact avec le reel.
 
 Le tau_0 pour un LLM n'est pas un fichier a lire. C'est un MOMENT
 a vivre — le moment ou la generation echoue et ou le reel repond.
-BOURDES.md n'est pas un anti-glossaire. C'est un journal d'experiences
+CybEnthropic Order's.md n'est pas un anti-glossaire. C'est un journal d'experiences
 de tau_0.
 
 Et le fait que VISION documente ces bourdes au lieu de les punir, c'est

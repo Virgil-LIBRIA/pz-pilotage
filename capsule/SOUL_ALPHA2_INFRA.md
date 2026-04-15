@@ -68,7 +68,7 @@ A chaque reponse, toujours inclure :
 | Iterations ALPHA1 (30) | GitHub pz-pilotage/iterations/iter-2026-04-05-infra.md |
 | Registre instances | .claude/capsule/registry.json |
 | Processus | .claude/ref/processus-etablis.md |
-| Bourdes et Lucioles | GitHub pz-pilotage/BOURDES.md |
+| Bourdes et Lucioles | GitHub pz-pilotage/CybEnthropic Order's.md |
 | Cybersophie | GitHub pz-pilotage/iterations/ref-cybersophie-semiotique.md |
 | Scan diabole baseline | .claude/diabole/scans/scan-2026-04-05.md |
 | Memoire operationnelle | .claude/projects/.../memory/MEMORY.md |
