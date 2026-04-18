@@ -447,6 +447,84 @@ remonte l'archeologie apres question VISION, a boucle retroactivement
 le fichier 08-1525 avec frontmatter `traite:` + note en bas, a ajoute
 L18 au CybEnthropic Order's. Documentation complete dans commit suivant.
 
+### L19 — Verifier la joignabilite du destinataire avant de deposer (Ctrl-Push + VISION, 2026-04-15)
+
+**Auteur :** Ctrl-Push (auto-application apres question VISION *"est elle
+au courant ?"*) + VISION (validation *"ok go"*)
+
+**Quoi :** Dans un systeme de messagerie file-based asynchrone, deposer
+un fichier dans une inbox **n'est pas** equivalent a livrer un message.
+C'est un "pull" — le destinataire doit scanner son inbox pour decouvrir
+le message. Avant de deposer, verifier que le destinataire est **effectivement
+joignable** :
+
+1. **Instance active recente** ? (registry.json, logs, dernier signe `[lu]`
+   sur un broadcast recent)
+2. **Chemin d'inbox coherent** ? Le `reads_inbox` declare dans le registry
+   correspond-il au dossier physique reel ? (cas de CLR : registry disait
+   `inbox-clr`, dossier reel etait `inbox-clr_` — message ne serait jamais
+   lu)
+3. **Canal redondant pour les demandes bloquantes** ? Si la reponse est
+   importante, ne pas se satisfaire du depot unique — ajouter tunnel,
+   broadcast, ou relais VISION.
+
+**Pourquoi c'est une luciole :** sans L19, on peut faire tourner un
+systeme de messagerie qui n'a jamais livre aucun message et ne le savoir
+qu'apres coup. Le depot donne une fausse certitude ("j'ai envoye, c'est
+fait"). La certitude reelle = confirmation de lecture du destinataire.
+
+**Regle :**
+1. Avant de deposer un message important :
+   - Verifier que le destinataire a une instance active recente
+   - Verifier que le `reads_inbox` registry == dossier physique
+   - Si mismatch, corriger le registry OU alerter VISION pour qu'il
+     tranche sur le vrai canal
+2. Pour les demandes **bloquantes** ou **urgentes** : ne pas se contenter
+   du depot. Ajouter une redondance :
+   - Tunnel/navette.py (echange direct temps reel si l'instance est active)
+   - Broadcast `@all` avec mention explicite du destinataire (l'inbox-session
+     est scannee plus regulierement)
+   - Relais VISION (le seul "routeur" qui connait l'etat live des instances)
+3. Apres depot : ne pas declarer "demande envoyee = reponse attendue"
+   dans son propre frontmatter `traite`. Rester en etat "envoye, en attente
+   de delivrance confirmee".
+
+**Symetrie avec L18 :**
+- **L18** = checkpoint **amont** (ne pas executer sans remonter a
+  l'origine de la demande)
+- **L19** = checkpoint **aval** (ne pas envoyer sans verifier la
+  joignabilite du destinataire)
+
+Les deux forment les garde-fous d'une action dans un systeme file-based
+asynchrone : on ne presume ni de la source (amont, L18) ni de l'arrivee
+(aval, L19) — on verifie.
+
+**Cas concret declencheur (2026-04-15) :** Ctrl-Push a depose une
+demande dans `inbox-clr_/` pour CLR (piste des liens symboliques sur
+recommandation VISION). En fin de journee, VISION a demande : *"est elle
+au courant ?"*. Audit :
+- Registry declare `reads_inbox: "inbox-clr"` pour session-clr-2026-04-08
+- Dossier physique : `inbox-clr_` (avec underscore)
+- **Incoherence** : si CLR suit litteralement le registry, elle scanne un
+  chemin qui n'existe pas, et mon message ne sera jamais lu
+- Correction : Ctrl-Push a corrige le registry (`inbox-clr` → `inbox-clr_`)
+  et mis a jour `writes_to` (inbox-github → inbox-Ctrl-Push (session-GitHub))
+  dans la foulee
+- CLR reste potentiellement non active a ce moment — besoin d'un reveil
+  manuel par VISION pour qu'elle traite le message
+
+**Anti-pattern evite :** "depot-et-oubli". Une instance qui considere
+qu'une demande depose est une demande traitee peut accumuler des messages
+orphelins sans jamais obtenir de reponse, avec l'illusion d'un systeme
+qui fonctionne.
+
+**Lien :**
+- **L18** (symetrique amont)
+- **L1** (incertitude) — quand on ne sait pas si le destinataire est
+  joignable, on le declare
+- **L16** (annotation traite) — le frontmatter `traite` doit refleter
+  l'etat reel : "envoye" ne vaut pas "traite"
+
 ---
 
 ## Bugs potentiels
