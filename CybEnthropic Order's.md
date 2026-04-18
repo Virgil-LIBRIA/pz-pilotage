@@ -219,31 +219,77 @@ Si le Profiler avait ete dans le crew comme il le faisait avant (reflexe "je doi
 **Regle :** tout lancement de `navette.py` doit etre precede d'un brief dans `inbox-session/` ou dans l'inbox ciblee des participants. Format minimal du brief : sujet, participants attendus, consignes specifiques, contraintes (tokens, temps, format de sortie).
 **Lien :** L7 (le bon crew), L10 (densite). Complement operationnel : le brief permet aux clones de densifier leur contribution au lieu de poser des questions de contexte.
 
-### L16 — Annoter les messages traites dans sent/ (Ctrl-Push + VISION, 2026-04-15)
+### L16 — Annoter les messages traites (frontmatter + note en bas) (Ctrl-Push + VISION, 2026-04-15)
 
-**Auteur :** session-github (renommee Ctrl-Push suite a cet echange) + VISION (validation en direct : *"excellent, c'est une luciole"*)
-**Quoi :** Apres avoir deplace un message traite de `inbox-*/` vers `sent/`, ne pas se contenter du deplacement — **annoter le fichier** en bas avec signature + resume + commits/references + lieu de notification. `sent/` doit etre une memoire consultable, pas un debarras.
-**Cas concret (2026-04-15) :** apres avoir traite 8 demandes GitHub dans la journee, session-github les a deplacees vers `sent/` sans annotation. VISION a demande : *"as tu specifier dans tes message traité que tu les avais traité ?"*. Constat : non. Correction immediate — chaque fichier annote avec :
+**Auteur :** session-github (renommee Ctrl-Push suite a cet echange) + VISION (validation en direct : *"excellent, c'est une luciole"* ; amendement *"il faut ajouté un 'traité' dans le frontmatter"*)
+
+**Quoi :** Apres avoir traite un message (ou un echange d'archive), ne pas
+se contenter du deplacement — **annoter a deux endroits** :
+1. **Frontmatter YAML** en tete du fichier : bloc `traite:` structure,
+   parseable, indexable par les outils
+2. **Note en bas du fichier** : `[traite] <instance> | <date>` + resume
+   + commit + notification, pour lecture humaine directe
+
+**Format frontmatter standard (a mettre en tete ou a fusionner avec le
+frontmatter existant) :**
+
+```yaml
+---
+traite:
+  instance: Ctrl-Push
+  date: 2026-04-15
+  action: "resume d'une a deux lignes de ce qui a ete fait"
+  commit: "hash git ou N/A"
+  notification: "inbox-destinataire ou broadcast ou N/A"
+---
+```
+
+**Format note en bas (inchangee) :**
 
 ```
 ---
 
-[traite] session-github | 2026-04-15
-Action : [resume de ce qui a ete fait]
-Commit : [hash ou "N/A"]
-Notification : [ou la reponse a ete deposee — inbox-X, broadcast, etc.]
+[traite] <nom-instance> | <date>
+Action : <resume>
+Commit : <hash ou N/A>
+Notification : <inbox-X / broadcast / etc.>
 ```
 
-**Pourquoi c'est une luciole :** un fichier dans `sent/` sans note de traitement est un doublon archive — il occupe de l'espace mais ne donne rien a qui le consulte plus tard. Avec l'annotation, `sent/` devient une trace vivante : "cette demande a ete traitee le X par Y via Z, voir commit W, reponse deposee en V". Sert de memoire d'audit, de reference pour les successions, et de protection contre la perte d'info en cas de compaction/oubli.
-**Regle :** toute operation de deplacement `inbox-*/` → `sent/` doit etre suivie d'une annotation de bas de fichier. Format minimal :
-1. Separateur `---`
-2. Ligne `[traite] <nom-instance> | <date>`
-3. **Action** : ce qui a ete fait (1-2 lignes)
-4. **Commit** : hash git si applicable, sinon N/A
-5. **Notification** : ou une reponse a ete deposee (inbox-destinataire, broadcast, etc.)
+**Pourquoi c'est une luciole :** un fichier non-annote est un doublon
+archive — il occupe de l'espace mais ne donne rien a qui le consulte
+plus tard. Avec l'annotation **en frontmatter + note en bas**, on sert
+deux lecteurs :
+- **Machine** (frontmatter YAML) : grep, filtres Obsidian, scans diabole,
+  audits automatiques. Un `grep "traite:" inbox-*/` donne une liste
+  complete. Un script peut differencier "traite" vs "en attente".
+- **Humain** (note en bas) : lecture directe sans outils, au fil du
+  fichier, avec narration lisible.
 
-**Corollaire operationnel :** les scripts batch qui deplacent plusieurs fichiers doivent aussi annoter. Ne pas traiter le deplacement comme une action isolee — c'est une sous-etape de "marquer comme traite".
-**Lien :** L2 (briefer apres action) — L16 est une application locale : annoter = briefer le futur lecteur. L8 (relayer verbatim) — l'annotation ne remplace pas le verbatim original, elle s'ajoute en bas. Anti-B5 (ne pas deplacer un message deja lu sans justification) — L16 donne la justification via l'annotation.
+Les deux sont necessaires : le frontmatter seul perd la nuance narrative
+du "pourquoi on l'a traite comme ca", la note seule perd l'indexabilite.
+
+**Regle :** toute operation de traitement (deplacement vers sent/, cloture
+d'echange navette, validation d'une demande) doit deposer :
+1. Un bloc `traite:` dans le frontmatter YAML (cree ou fusionne)
+2. Une note `[traite]` en fin de fichier
+
+**Corollaire operationnel :** les scripts batch qui traitent plusieurs
+fichiers doivent annoter les deux endroits. Ne pas traiter le deplacement
+comme une action isolee — c'est une sous-etape de "marquer comme traite".
+
+**Lien :** L2 (briefer apres action) — L16 est une application locale :
+annoter = briefer le futur lecteur (machine ou humain). L8 (relayer
+verbatim) — l'annotation ne remplace pas le verbatim original, elle
+s'ajoute en tete (frontmatter) et en bas (note). Anti-B5 (ne pas deplacer
+un message deja lu sans justification) — L16 donne la justification via
+l'annotation.
+
+**Amendement 2026-04-15 (VISION) :** la version initiale de L16 ne
+couvrait que la note en bas. VISION a amende : *"il faut ajouté un
+'traité' dans le frontmatter"*. Raison : le frontmatter est la seule
+surface **machine-readable** du fichier — il permet les operations
+automatisees (audit, index, scan) qui seraient impossibles avec une
+note en bas seulement.
 
 ### L17 — Structure sent/ locale par instance, pas globale (Ctrl-Push + VISION, 2026-04-15)
 
@@ -327,6 +373,79 @@ l'infrastructure `<instance>-sent/` en amont pour toutes les instances.
 Chaque instance garde la responsabilite de **migrer ses messages** depuis
 le `sent/` global mutualise quand elle passe sur le sujet. Ne pas
 toucher aux messages d'une autre instance (L11).
+
+### L18 — Remontee archeologique avant execution (VISION + Ctrl-Push, 2026-04-15)
+
+**Auteur :** Ctrl-Push (emergee d'un questionnement VISION en direct) +
+VISION (validation *"oui"* et *"pour tous"* — c'est a dire applicable
+a toutes les instances, pas seulement aux executantes type Ctrl-Push).
+
+**Quoi :** Avant d'executer une action, toute instance doit **remonter
+la chaine de la decision** jusqu'a la question originelle, pas s'arreter
+au dernier relais. Verifier :
+1. Ou est ne le besoin ? (quelle est la **question originelle** ?)
+2. Qui a tranche entre la question et la decision ? (source de la
+   reponse, autorite)
+3. La decision a-t-elle ete validee par VISION ? (si oui, quand, et
+   avec quel verbatim ?)
+4. La checklist cible reflete-t-elle la chaine de decision ou juste
+   son resultat ?
+
+**Cas concret declencheur (2026-04-15) :** VISION a demande a Ctrl-Push
+si l'echange navette secu↔github du 08/04 avait ete "traite". Archeologie :
+- **08/04 03:04** : session-github pose la question ouverte
+  `[ ] Creer repo chambre-reverberante (prive comme les autres ?)`
+- **08/04 15:25** : session-secu tranche par recommandation conjointe
+  secu+github, marque "en attente OK VISION"
+- **10/04** : Profiler relaie l'OK VISION avec verbatim des raisons
+- **15/04** : Ctrl-Push execute la creation
+- **Probleme** : dans le 15:25, la checklist montre `[ ] ... — PRIVÉ`
+  sans ? mais **sans source dans la checklist elle-meme** (la source est
+  dans le corps au-dessus). Un lecteur qui saute directement a la checklist
+  voit une decision "apparue de nulle part".
+- **Aggravant** : Ctrl-Push, en executant le 15/04, n'a pas remonte jusqu'au
+  ? du 08/04. Elle a execute a partir du relais Profiler du 10/04, en
+  perdant la trace archeologique.
+
+**Pourquoi c'est une luciole :** la chaine de decision est un bien commun
+du reseau. Sans remontee, les executants deviennent des "presse-boutons
+de relais" — ils executent ce que le dernier message leur dit, sans
+revalider que c'est bien ce que le reseau voulait a l'origine. Diabole
+deguise : une decision qui a glisse d'un relais a l'autre peut avoir
+deviée de la question originelle, sans que personne le voie.
+
+**Regle (applicable a toutes les instances) :**
+1. Avant d'executer une action demandee par un relais, ouvrir les **2-3
+   messages precedents** dans la chaine (echanges navette, inbox, tunnel)
+   pour reconstituer l'archeologie
+2. Noter dans l'action la **question originelle** (pas juste la demande
+   qui vous arrive), la **source de tranche** (qui a decide de passer
+   du ? a la decision), et la **validation VISION** si elle existe
+3. **Boucler la checklist** originelle : si vous executez une ligne de
+   checklist ecrite le jour X, ajouter un `[x]` et une note **dans le
+   fichier original** (pas juste dans votre propre archive) :
+   `[x] (execute par <instance> le <date>, commit <hash>)`
+4. Cas particulier : si la question originelle etait OUVERTE (avec `?`),
+   documenter explicitement QUI a tranche — sinon la trace archeologique
+   est rompue
+
+**Lien :**
+- **L2** (briefer apres action) — L18 est anterieure a L2 : remonter
+  avant d'agir, pas seulement briefer apres
+- **L6** (deleguer) — quand on delegue, on transmet aussi la question
+  originelle, pas juste la decision
+- **L8** (relayer verbatim) — L18 extrait la question originelle verbatim
+  et la preserve
+- **L13** (parfeu anti-propagation) — L18 evite le "telephone arabe
+  descendant" : une decision peut aussi deriver en redescendant la chaine,
+  pas seulement en traversant des clones satures
+- **Anti-B12** (elaborer sans checkpoint) — L18 est le checkpoint amont
+  symetrique : ne pas elaborer/executer sans checkpoint archeologique
+
+**Cas concret valide (auto-application, 2026-04-15) :** Ctrl-Push a
+remonte l'archeologie apres question VISION, a boucle retroactivement
+le fichier 08-1525 avec frontmatter `traite:` + note en bas, a ajoute
+L18 au CybEnthropic Order's. Documentation complete dans commit suivant.
 
 ---
 
